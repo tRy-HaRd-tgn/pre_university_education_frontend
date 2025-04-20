@@ -1,0 +1,36 @@
+.flex {
+  width: 90%;
+  height: 100%;
+}
+.course {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 85px;
+  margin-bottom: 2%;
+}
+.description {
+  width: fit-content;
+  height: 100%;
+  background: #b9e93e;
+  border-radius: 14px;
+  width: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 18px;
+  text-align: center;
+  margin-left: 35%;
+  color: #ffffff;
+}
+.coursePlace {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  height: fit-content;
+}

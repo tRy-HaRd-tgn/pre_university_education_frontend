@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  background-color: wheat;
+  border-radius: 15px;
+  height: 382px;
+  margin-bottom: 5%;
+}
+.left {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 5%;
+  margin-top: 2%;
+}
+.top {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 47px;
+
+  color: #000000;
+}
+.bottom {
+  margin-top: 5%;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 25px;
+
+  color: #ffffff;
+}
+.right {
+  width: fit-content !important;
+}
