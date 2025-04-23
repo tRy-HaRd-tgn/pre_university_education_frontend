@@ -3,6 +3,7 @@ import { Header } from "@/components/header";
 import { LogosPlacements } from "@/components/logosPlacements";
 import { CoursePlacement } from "@/components/coursePlacements";
 import { WebinarPlacements } from "@/components/webinarPlacements";
+import { TeachersPlacements } from "@/components/teachersPlacements";
 // main page
 export default function Home() {
   return (
@@ -16,6 +17,9 @@ export default function Home() {
       </div>
       <div className={styles.webinars}>
         <WebinarPlacements />
+      </div>
+      <div className={styles.teachers}>
+        <TeachersPlacements />
       </div>
     </div>
   );
