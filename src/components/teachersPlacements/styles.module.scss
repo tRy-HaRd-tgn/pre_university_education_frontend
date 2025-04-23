@@ -68,9 +68,11 @@
   color: #8d8d8d;
 }
 .arrow {
+  width: 60px;
+  height: 60px;
   position: absolute;
-  bottom: 2%;
-  right: 2%;
+  bottom: 4%;
+  right: 4%;
   cursor: pointer;
 }
 .carousel {

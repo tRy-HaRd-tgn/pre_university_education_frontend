@@ -4,6 +4,7 @@ import { LogosPlacements } from "@/components/logosPlacements";
 import { CoursePlacement } from "@/components/coursePlacements";
 import { WebinarPlacements } from "@/components/webinarPlacements";
 import { TeachersPlacements } from "@/components/teachersPlacements";
+import { UfuDescription } from "@/components/ufuDescription";
 // main page
 export default function Home() {
   return (
@@ -20,6 +21,9 @@ export default function Home() {
       </div>
       <div className={styles.teachers}>
         <TeachersPlacements />
+      </div>
+      <div className={styles.ufu}>
+        <UfuDescription />
       </div>
     </div>
   );
