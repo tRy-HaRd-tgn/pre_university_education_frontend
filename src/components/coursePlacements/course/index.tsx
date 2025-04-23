@@ -1,12 +1,6 @@
 import Image from "next/image";
 import styles from "./styles.module.scss";
-type Props = {
-  name: string;
-  description: string;
-  img: string;
-  size: string;
-  color: string;
-};
+import { CourseProps as Props } from "../../../types/courseProps";
 
 export const Course = ({ name, description, img, size, color }: Props) => {
   return (

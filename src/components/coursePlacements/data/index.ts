@@ -1,10 +1,4 @@
-type Section = {
-  name: string;
-  description: string;
-  img: string;
-  color: string;
-  size: "short" | "wide"; // если size может быть только 'short' или 'full'
-};
+import { Section } from "../../../types/section";
 export const data: Section[] = [
   {
     name: 'Секция "секция радуга "',
