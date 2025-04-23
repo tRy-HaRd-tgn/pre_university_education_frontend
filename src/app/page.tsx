@@ -5,6 +5,7 @@ import { CoursePlacement } from "@/components/coursePlacements";
 import { WebinarPlacements } from "@/components/webinarPlacements";
 import { TeachersPlacements } from "@/components/teachersPlacements";
 import { UfuDescription } from "@/components/ufuDescription";
+import { Footer } from "@/components/footer";
 // main page
 export default function Home() {
   return (
@@ -25,6 +26,7 @@ export default function Home() {
       <div className={styles.ufu}>
         <UfuDescription />
       </div>
+      <Footer />
     </div>
   );
 }
