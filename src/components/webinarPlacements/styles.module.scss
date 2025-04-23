@@ -20,13 +20,12 @@
 }
 .webinarsScroller {
   width: 95%;
+  padding-left: 5%;
   height: 95%;
-
   overflow-y: scroll;
-  scroll-margin-top: 20px; // поменять
 }
 .webinarsScroller::-webkit-scrollbar {
-  width: 12px;
+  width: 10px;
 }
 .webinarsScroller::-webkit-scrollbar-track {
   background: none;

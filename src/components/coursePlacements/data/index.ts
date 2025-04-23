@@ -1,7 +1,7 @@
 import { Section } from "../../../types/section";
 export const data: Section[] = [
   {
-    name: 'Секция "секция радуга "',
+    name: 'Секция "радуга"',
     description: "Творческая секция для детей от 5 лет",
     img: "/boy.png",
     size: "short",
