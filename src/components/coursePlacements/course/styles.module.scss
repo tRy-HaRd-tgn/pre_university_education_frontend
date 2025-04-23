@@ -5,6 +5,7 @@
   border-radius: 15px;
   height: 382px;
   margin-bottom: 5%;
+  cursor: pointer;
 }
 .left {
   height: 100%;
@@ -35,4 +36,5 @@
 }
 .right {
   width: fit-content !important;
+  border-bottom-right-radius: 15px;
 }

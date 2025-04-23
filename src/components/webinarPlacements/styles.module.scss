@@ -1,0 +1,37 @@
+.container {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 955px;
+}
+.leftSide {
+  width: 45%;
+  height: 100%;
+}
+.rightSide {
+  width: 45%;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  justify-content: center;
+  border-radius: 35px;
+  height: 100%;
+}
+.webinarsScroller {
+  width: 95%;
+  height: 95%;
+
+  overflow-y: scroll;
+  scroll-margin-top: 20px; // поменять
+}
+.webinarsScroller::-webkit-scrollbar {
+  width: 12px;
+}
+.webinarsScroller::-webkit-scrollbar-track {
+  background: none;
+}
+.webinarsScroller::-webkit-scrollbar-thumb {
+  background-color: grey;
+  border-radius: 5px;
+}

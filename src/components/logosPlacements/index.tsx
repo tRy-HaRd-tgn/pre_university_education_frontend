@@ -10,7 +10,7 @@ export const LogosPlacements = () => {
         height={92}
         src="/inst.svg"
         alt="error"
-      ></Image>
+      />
       <Image
         style={{
           position: "absolute",
@@ -23,7 +23,7 @@ export const LogosPlacements = () => {
         height={92}
         src="/tg.svg"
         alt="error"
-      ></Image>
+      />
       <Image
         className={styles.img}
         style={{
@@ -36,7 +36,7 @@ export const LogosPlacements = () => {
         height={92}
         src="/tgBig.svg"
         alt="error"
-      ></Image>
+      />
       <Image
         className={styles.img}
         style={{
@@ -49,7 +49,7 @@ export const LogosPlacements = () => {
         height={92}
         src="/vk.svg"
         alt="error"
-      ></Image>
+      />
       <Image
         style={{
           position: "absolute",
@@ -62,7 +62,7 @@ export const LogosPlacements = () => {
         height={92}
         src="/instBig.svg"
         alt="error"
-      ></Image>
+      />
       <div className={styles.wrapper}>
         <Image
           style={{ borderRadius: "10%" }}
@@ -72,7 +72,7 @@ export const LogosPlacements = () => {
           height={920}
           src="/logoW.png"
           alt="error"
-        ></Image>
+        />
         <p className={styles.description}>Лучшее будущее начинается здесь</p>
       </div>
     </>

@@ -2,6 +2,7 @@ import styles from "./main-page.module.scss";
 import { Header } from "@/components/header";
 import { LogosPlacements } from "@/components/logosPlacements";
 import { CoursePlacement } from "@/components/coursePlacements";
+import { WebinarPlacements } from "@/components/webinarPlacements";
 // main page
 export default function Home() {
   return (
@@ -12,6 +13,9 @@ export default function Home() {
       </div>
       <div className={styles.courses}>
         <CoursePlacement />
+      </div>
+      <div className={styles.webinars}>
+        <WebinarPlacements />
       </div>
     </div>
   );
