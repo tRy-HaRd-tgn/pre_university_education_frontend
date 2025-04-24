@@ -10,9 +10,8 @@
 .content {
   width: 80%;
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: space-between;
-  height: fit-content;
 }
 .heading {
   font-family: "Inter";
@@ -27,7 +26,6 @@
   padding-left: 2%;
   border-radius: 25px;
   width: 65%;
-  height: fit-content;
   background: rgba(255, 255, 255, 0.76);
 }
 .imgWrapper {
@@ -64,7 +62,7 @@
 }
 .rightSide {
   width: 30%;
-  height: 90%;
+
   background: rgba(255, 255, 255, 0.76);
   border-radius: 15px;
 }
@@ -87,4 +85,15 @@
 }
 .topRight {
   width: 50%;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
 }

@@ -1,5 +1,7 @@
 import styles from "./styles.module.scss";
 import Image from "next/image";
+import { Map } from "../map";
+
 export const Footer = () => {
   return (
     <footer className={styles.footer}>
@@ -131,7 +133,9 @@ export const Footer = () => {
             </div>
           </div>
         </div>
-        <div className={styles.rightSide}>asd</div>
+        <div className={styles.rightSide}>
+          <Map />
+        </div>
       </div>
     </footer>
   );
