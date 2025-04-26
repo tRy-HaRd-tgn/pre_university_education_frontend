@@ -1,0 +1,25 @@
+import styles from "./styles.module.scss";
+import Image from "next/image";
+export const RainbowPlacement = () => {
+  return (
+    <div className={styles.container}>
+      <Image
+        className={styles.img}
+        src={"/children.png"}
+        alt="error"
+        width={1800}
+        height={1800}
+      />
+      <div className={styles.green} />
+      <Image
+        src={"/green.png"}
+        alt="error"
+        width={1800}
+        height={1800}
+        className={styles.blue}
+      />
+      <button className={styles.button}>Хочу заниматься</button>
+      <p className={styles.text}>ОТКРОЙ МИР ЗНАНИЙ </p>
+    </div>
+  );
+};

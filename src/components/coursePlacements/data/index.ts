@@ -6,7 +6,7 @@ export const data: Section[] = [
     img: "/boy.png",
     size: "short",
     color: "#35C29A",
-    url: "undefined",
+    url: "rainbow",
   },
   {
     name: "ЕГЭ-2024",
