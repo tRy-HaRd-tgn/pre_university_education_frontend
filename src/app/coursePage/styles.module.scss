@@ -1,0 +1,22 @@
+.headingPlacement {
+  width: 100%;
+  height: 900px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.gradient {
+  position: absolute;
+  top: 0px;
+  background: linear-gradient(
+    180deg,
+    #ea7272 0%,
+    rgba(189, 189, 189, 0.92) 0.01%,
+    rgba(182, 182, 182, 0.41) 46.95%,
+    rgba(210, 210, 210, 0.06) 84.23%,
+    rgba(255, 255, 255, 0) 138.08%
+  );
+  width: 100%;
+  height: 147px;
+}

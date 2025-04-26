@@ -7,7 +7,7 @@ export default function NotFound() {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        backgroundColor: "black",
+        backgroundColor: "white",
         fontSize: "150%",
         flexDirection: "column",
       }}

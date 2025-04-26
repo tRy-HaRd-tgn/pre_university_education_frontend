@@ -26,13 +26,20 @@ export const Header = ({ flag }: Props) => {
         </div>
         <div className={styles.menu}>
           <div className={styles.menuContent}>
-            <p className={styles.menudContentP}>Курсы</p>
-            <p className={styles.menudContentP}>Преподаватели</p>
-            <p className={styles.menudContentP}>Отзывы</p>
-            <p className={styles.menudContentP}>Контакты</p>
+            <p className={!flag ? styles.menuContentP : styles.menuContentPB}>
+              Курсы
+            </p>
+            <p className={!flag ? styles.menuContentP : styles.menuContentPB}>
+              Преподаватели
+            </p>
+            <p className={!flag ? styles.menuContentP : styles.menuContentPB}>
+              Отзывы
+            </p>
+            <p className={!flag ? styles.menuContentP : styles.menuContentPB}>
+              Контакты
+            </p>
           </div>
-          {flag ? <></> : <></>}
-          {/* заготовка на будущее */}
+          {flag ? <button className={styles.button}>Войти</button> : <></>}
         </div>
       </div>
     </header>
