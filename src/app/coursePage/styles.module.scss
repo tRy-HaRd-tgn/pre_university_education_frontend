@@ -1,3 +1,7 @@
+.container {
+  width: 100%;
+  height: fit-content;
+}
 .headingPlacement {
   width: 100%;
   height: 900px;
@@ -23,5 +27,28 @@
 .coursePlacement {
   margin-top: 1%;
   width: 100%;
-  height: 1000px;
+  height: fit-content;
+}
+.questions {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2%;
+}
+.questionsHeading {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 39px;
+  color: #000000;
+  width: 100%;
+  border-bottom: 5px solid #4c8499;
+  padding-bottom: 1%;
+}
+.questionsWrapper {
+  width: 90%;
+  height: 100%;
 }
