@@ -4,7 +4,7 @@ import { Map } from "../map";
 
 export const Footer = () => {
   return (
-    <footer className={styles.footer}>
+    <footer id="contacts" className={styles.footer}>
       <div className={styles.content}>
         <div className={styles.leftSide}>
           <h2 className={styles.heading}>Контактная информация</h2>

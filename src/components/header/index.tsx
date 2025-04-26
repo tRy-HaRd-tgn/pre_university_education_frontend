@@ -1,11 +1,18 @@
+"use client";
 import styles from "./styles.module.scss";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
+import path from "path";
 type Props = {
   flag: boolean;
 };
 const logoStyle = {};
 
 export const Header = ({ flag }: Props) => {
+  const router = useRouter();
+  const pathName = usePathname();
+  console.log(pathName);
   return (
     <header className={flag ? styles.header : styles.headerB}>
       <div className={styles.content}>
@@ -26,16 +33,52 @@ export const Header = ({ flag }: Props) => {
         </div>
         <div className={styles.menu}>
           <div className={styles.menuContent}>
-            <p className={!flag ? styles.menuContentP : styles.menuContentPB}>
-              Курсы
+            <p
+              onClick={() => {
+                router.replace("/");
+              }}
+              className={!flag ? styles.menuContentP : styles.menuContentPB}
+            >
+              Главная
             </p>
-            <p className={!flag ? styles.menuContentP : styles.menuContentPB}>
-              Преподаватели
-            </p>
-            <p className={!flag ? styles.menuContentP : styles.menuContentPB}>
-              Отзывы
-            </p>
-            <p className={!flag ? styles.menuContentP : styles.menuContentPB}>
+            {pathName === "/coursePage" ? (
+              <></>
+            ) : (
+              <p
+                onClick={() => {
+                  router.replace("#course");
+                }}
+                className={!flag ? styles.menuContentP : styles.menuContentPB}
+              >
+                Курсы
+              </p>
+            )}
+            {pathName === "/" || pathName === "/coursePage" ? (
+              <></>
+            ) : (
+              <p className={!flag ? styles.menuContentP : styles.menuContentPB}>
+                Преподаватели
+              </p>
+            )}
+
+            {pathName === "/coursePage" ? (
+              <></>
+            ) : (
+              <p
+                onClick={() => {
+                  router.replace("#reviews");
+                }}
+                className={!flag ? styles.menuContentP : styles.menuContentPB}
+              >
+                Отзывы
+              </p>
+            )}
+            <p
+              onClick={() => {
+                router.replace("#contacts");
+              }}
+              className={!flag ? styles.menuContentP : styles.menuContentPB}
+            >
               Контакты
             </p>
           </div>

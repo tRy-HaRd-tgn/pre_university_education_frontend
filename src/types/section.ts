@@ -4,4 +4,5 @@ export type Section = {
   img: string;
   color: string;
   size: "short" | "wide"; // если size может быть только 'short' или 'full'
+  url: string;
 };

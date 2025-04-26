@@ -13,7 +13,7 @@ import { Teacher } from "./teacher";
 
 export const TeachersPlacements = () => {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="reviews">
       <div className={styles.content}>
         <div className={styles.leftSide}>
           <Carousel className={styles.carousel}>

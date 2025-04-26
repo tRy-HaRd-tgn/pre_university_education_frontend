@@ -6,6 +6,7 @@ export const data: Section[] = [
     img: "/boy.png",
     size: "short",
     color: "#35C29A",
+    url: "undefined",
   },
   {
     name: "ЕГЭ-2024",
@@ -13,6 +14,7 @@ export const data: Section[] = [
     img: "/woman.png",
     size: "short",
     color: "#C23E7E",
+    url: "undefined",
   },
   {
     name: "Переквалификация",
@@ -20,5 +22,6 @@ export const data: Section[] = [
     img: "/man.png",
     size: "wide",
     color: "#4267DB",
+    url: "coursePage",
   },
 ];

@@ -4,4 +4,5 @@ export type CourseProps = {
   img: string;
   size: string;
   color: string;
+  url: string;
 };

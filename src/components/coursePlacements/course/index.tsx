@@ -1,10 +1,16 @@
+"use client";
 import Image from "next/image";
 import styles from "./styles.module.scss";
 import { CourseProps as Props } from "../../../types/courseProps";
+import { useRouter } from "next/navigation";
 
-export const Course = ({ name, description, img, size, color }: Props) => {
+export const Course = ({ name, description, img, size, color, url }: Props) => {
+  const router = useRouter();
   return (
     <div
+      onClick={() => {
+        router.replace(`/${url}`);
+      }}
       className={styles.container}
       style={
         size === "short"
@@ -22,7 +28,7 @@ export const Course = ({ name, description, img, size, color }: Props) => {
         className={styles.right}
         src={img}
         alt="error"
-      ></Image>
+      />
     </div>
   );
 };
