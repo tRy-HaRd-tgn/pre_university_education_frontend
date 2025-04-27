@@ -3,7 +3,7 @@ import { Header } from "@/components/header";
 import { LogosPlacements } from "@/components/logosPlacements";
 import { CoursePlacement } from "@/components/coursePlacements";
 import { WebinarPlacements } from "@/components/webinarPlacements";
-import { TeachersPlacements } from "@/components/teachersPlacements";
+import { RewiewsPlacements } from "@/components/reviewsPlacements";
 import { UfuDescription } from "@/components/ufuDescription";
 import { Footer } from "@/components/footer";
 // main page
@@ -21,7 +21,7 @@ export default function Home() {
         <WebinarPlacements />
       </div>
       <div className={styles.teachers}>
-        <TeachersPlacements />
+        <RewiewsPlacements />
       </div>
       <div className={styles.ufu}>
         <UfuDescription />

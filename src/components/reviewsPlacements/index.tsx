@@ -11,7 +11,7 @@ import Image from "next/image";
 import { data } from "./data";
 import { Teacher } from "./teacher";
 
-export const TeachersPlacements = () => {
+export const RewiewsPlacements = () => {
   return (
     <div className={styles.container} id="reviews">
       <div className={styles.content}>
