@@ -1,5 +1,5 @@
-import { Teacher } from "../../types/teachers";
-export const data: Teacher[] = [
+import { rewiew } from "../../types/rewiew";
+export const data: rewiew[] = [
   {
     name: "Алена",
     description: "переквалификация: юриспруденция",

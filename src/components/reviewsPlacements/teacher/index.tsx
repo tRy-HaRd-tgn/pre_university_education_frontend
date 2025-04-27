@@ -1,5 +1,5 @@
 import styles from "./styles.module.scss";
-import { Teacher as Props } from "@/types/teachers";
+import { Teacher as Props } from "@/types/rewiew";
 import Image from "next/image";
 export const Teacher = ({ name, description, text }: Props) => {
   return (

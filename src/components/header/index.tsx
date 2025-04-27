@@ -56,7 +56,12 @@ export const Header = ({ flag }: Props) => {
             {pathName === "/" || pathName === "/coursePage" ? (
               <></>
             ) : (
-              <p className={!flag ? styles.menuContentP : styles.menuContentPB}>
+              <p
+                onClick={() => {
+                  router.replace("#teachers");
+                }}
+                className={!flag ? styles.menuContentP : styles.menuContentPB}
+              >
                 Преподаватели
               </p>
             )}

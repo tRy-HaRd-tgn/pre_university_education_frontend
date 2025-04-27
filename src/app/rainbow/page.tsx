@@ -4,6 +4,7 @@ import { RainbowPlacement } from "@/components/rainbowPlacement";
 import { EducationProgram } from "@/components/educationProgram";
 import { ClassesPropgram } from "@/components/classesProgram";
 import { RewiewsPlacements } from "@/components/reviewsPlacements";
+import { TeachersPlacement } from "@/components/teachersPlacement";
 import { Footer } from "@/components/footer";
 export default function Page() {
   return (
@@ -18,7 +19,9 @@ export default function Page() {
       <div className={styles.classes}>
         <ClassesPropgram />
       </div>
-      <div></div>
+      <div className={styles.teachersPlacement}>
+        <TeachersPlacement />
+      </div>
       <div className={styles.reviews}>
         <RewiewsPlacements />
       </div>
