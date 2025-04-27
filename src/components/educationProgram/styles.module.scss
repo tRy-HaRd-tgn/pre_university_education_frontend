@@ -1,0 +1,178 @@
+.container {
+  width: 80%;
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.h2 {
+  height: 5%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  text-align: justify;
+  margin-bottom: 2%;
+  color: #000000;
+}
+.span {
+  color: white;
+  padding: 25px;
+  background: #b9e93e;
+  border-radius: 18px;
+  width: fit-content;
+  height: fit-content;
+}
+.wrapper {
+  width: 100%;
+
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+}
+.left {
+  width: 62%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+}
+.right {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+}
+.leftTop {
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+
+  justify-content: space-between;
+  background: #f1f1f1;
+  border-radius: 15px;
+  margin-bottom: 5%;
+}
+.leftColor {
+  width: 5%;
+  background: #4267db;
+  border-radius: 10px;
+}
+.leftText {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 45px;
+
+  width: 90%;
+  color: #000000;
+}
+.leftTextSpan {
+  font-weight: 600;
+}
+.leftBottom {
+  width: 100%;
+  display: flex;
+  background: #f1f1f1;
+  border-radius: 15px;
+  align-items: stretch;
+  justify-content: space-between;
+}
+.rightColor {
+  width: 5%;
+  background: #35c29a;
+  border-radius: 10px;
+}
+.leftBottomText {
+  width: 100%;
+  display: flex;
+  height: fit-content;
+  flex-direction: column;
+  padding: 15px;
+  padding-left: 25px;
+}
+.heading {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 45px;
+
+  width: 90%;
+  color: #000000;
+}
+.leftBottomTextP {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 45px;
+
+  color: #000000;
+}
+.spanS {
+  font-weight: 600;
+}
+.rightTop {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  background: #f1f1f1;
+  border-radius: 15px;
+}
+.rightTopText {
+  text-align: right;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 50px;
+  padding-right: 5%;
+  padding-left: 5%;
+  height: fit-content;
+  color: #000000;
+}
+.rightTopColor {
+  width: 100%;
+  height: 50px;
+  background: #c23e7e;
+  border-radius: 10px;
+  margin-bottom: 2%;
+}
+.rightBottom {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #b9e93e;
+  border-radius: 10px;
+  margin-top: 5%;
+  cursor: pointer;
+}
+
+.rightBotomText {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+
+  display: flex;
+  align-items: center;
+  text-align: justify;
+
+  color: #ffffff;
+}
+.arrow {
+  margin-left: 5%;
+}
