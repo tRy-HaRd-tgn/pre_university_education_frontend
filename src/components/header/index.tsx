@@ -41,7 +41,9 @@ export const Header = ({ flag }: Props) => {
             >
               Главная
             </p>
-            {pathName === "/coursePage" || pathName === "/rainbow" ? (
+            {pathName === "/coursePage" ||
+            pathName === "/rainbow" ||
+            pathName === "/exam" ? (
               <></>
             ) : (
               <p
