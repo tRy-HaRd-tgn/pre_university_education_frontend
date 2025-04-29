@@ -11,7 +11,7 @@ export default function Page() {
     <div className={styles.container}>
       <Header flag={true} />
       <div className={styles.childrenPlacement}>
-        <RainbowPlacement />
+        <RainbowPlacement img={"/children.png"} />
       </div>
       <div className={styles.educationProgram}>
         <EducationProgram />

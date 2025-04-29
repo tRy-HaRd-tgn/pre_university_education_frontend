@@ -1,11 +1,12 @@
 import styles from "./styles.module.scss";
 import Image from "next/image";
-export const RainbowPlacement = () => {
+import { RainbowProps } from "@/types/rainbowPropos";
+export const RainbowPlacement = ({ img }: RainbowProps) => {
   return (
     <div className={styles.container}>
       <Image
         className={styles.img}
-        src={"/children.png"}
+        src={img}
         alt="error"
         width={1800}
         height={1800}

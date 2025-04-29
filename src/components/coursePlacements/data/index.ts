@@ -14,7 +14,7 @@ export const data: Section[] = [
     img: "/woman.png",
     size: "short",
     color: "#C23E7E",
-    url: "undefined",
+    url: "exam",
   },
   {
     name: "Переквалификация",
