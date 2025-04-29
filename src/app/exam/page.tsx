@@ -5,6 +5,7 @@ import { RewiewsPlacements } from "@/components/reviewsPlacements";
 import { TeachersPlacement } from "@/components/teachersPlacement";
 import { RainbowPlacement } from "@/components/rainbowPlacement";
 import { ExamProgram } from "@/components/examProgram";
+import { ExamChoise } from "@/components/examChoise";
 export default function Page() {
   return (
     <div className={styles.container}>
@@ -15,7 +16,9 @@ export default function Page() {
       <div className={styles.examProgram}>
         <ExamProgram />
       </div>
-      <div className={styles.exams}></div>
+      <div className={styles.exams}>
+        <ExamChoise />
+      </div>
       <div className={styles.teachers}>
         <TeachersPlacement />
       </div>

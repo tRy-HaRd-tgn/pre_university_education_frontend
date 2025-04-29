@@ -8,8 +8,8 @@ export const RainbowPlacement = ({ img }: RainbowProps) => {
         className={styles.img}
         src={img}
         alt="error"
-        width={1800}
-        height={1800}
+        width={1200}
+        height={800}
       />
       <div className={styles.green} />
       <Image
