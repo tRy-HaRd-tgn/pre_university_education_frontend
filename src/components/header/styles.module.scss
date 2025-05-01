@@ -92,6 +92,29 @@
   line-height: 18px;
   color: #5a5959;
 }
+.buttonB {
+  background: linear-gradient(
+    380deg,
+    rgba(205, 205, 205, 0.27) 0%,
+    rgba(129, 129, 129, 0.32) 50%,
+    rgba(205, 205, 205, 0.23) 100%
+  );
+  border-radius: 32px;
+  cursor: pointer;
+  margin-left: 25%;
+  width: 10%;
+  height: 45%;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 18px;
+  color: white;
+}
+.buttonB:hover {
+  color: black;
+  background-color: white;
+}
 .button:hover {
   color: black;
 }

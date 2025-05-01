@@ -90,18 +90,16 @@ export const Header = ({ flag }: Props) => {
             </p>
             <p
               onClick={() => {
-                window.open(
-                  "https://iues.sfedu.ru/raspv/HTML/Raspisan.html",
-                  "_blank",
-                  "noopener,noreferrer"
-                );
+                window.open(data.url, "_blank", "noopener,noreferrer");
               }}
               className={!flag ? styles.menuContentP : styles.menuContentPB}
             >
               Расписание
             </p>
           </div>
-          {flag ? <button className={styles.button}>Войти</button> : <></>}
+          <button className={!flag ? styles.buttonB : styles.button}>
+            Войти
+          </button>
         </div>
       </div>
     </header>
