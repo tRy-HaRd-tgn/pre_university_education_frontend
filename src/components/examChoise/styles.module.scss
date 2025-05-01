@@ -110,7 +110,7 @@
   font-weight: 700;
   font-size: 24px;
   line-height: 35px;
-
+  margin-right: 5%;
   color: #ffffff;
   background: #35c29a;
   border-radius: 10px;
@@ -122,6 +122,7 @@
 }
 .bottomRight {
   width: 30%;
+  min-width: fit-content;
   display: flex;
   justify-content: space-between;
 }
