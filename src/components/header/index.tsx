@@ -3,7 +3,7 @@ import styles from "./styles.module.scss";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { usePathname } from "next/navigation";
-import path from "path";
+import { data } from "./data";
 type Props = {
   flag: boolean;
 };
@@ -87,6 +87,18 @@ export const Header = ({ flag }: Props) => {
               className={!flag ? styles.menuContentP : styles.menuContentPB}
             >
               Контакты
+            </p>
+            <p
+              onClick={() => {
+                window.open(
+                  "https://iues.sfedu.ru/raspv/HTML/Raspisan.html",
+                  "_blank",
+                  "noopener,noreferrer"
+                );
+              }}
+              className={!flag ? styles.menuContentP : styles.menuContentPB}
+            >
+              Расписание
             </p>
           </div>
           {flag ? <button className={styles.button}>Войти</button> : <></>}

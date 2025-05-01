@@ -11,9 +11,6 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Header flag={false}></Header>
-      <div className={styles.logos}>
-        <LogosPlacements />
-      </div>
       <div className={styles.courses}>
         <CoursePlacement />
       </div>
