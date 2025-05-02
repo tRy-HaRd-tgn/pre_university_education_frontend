@@ -2,7 +2,11 @@
 import styles from "./styles.module.scss";
 import { data } from "./data";
 import { useState } from "react";
+import { useLockScroll } from "../modalComponent/hook";
+import Modal from "../modalComponent";
+import { WannaTeach } from "../wannaTeach";
 export const ExamChoise = () => {
+  const [showModal, setShowModal] = useLockScroll();
   const [state, setState]: [boolean, any] = useState(false);
   return (
     <div className={styles.container}>
@@ -80,12 +84,22 @@ export const ExamChoise = () => {
               <button
                 style={state ? { backgroundColor: "#c23e7e" } : {}}
                 className={styles.greenB}
+                onClick={() => setShowModal(true)}
               >
                 ЗАПИСАТЬСЯ
               </button>
             </div>
           </div>
         </div>
+        {showModal && (
+          <Modal
+            onClose={() => {
+              setShowModal(false);
+            }}
+          >
+            <WannaTeach />
+          </Modal>
+        )}
       </div>
     </div>
   );

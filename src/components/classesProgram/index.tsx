@@ -1,5 +1,10 @@
+"use client";
 import styles from "./styles.module.scss";
+import Modal from "../modalComponent";
+import { WannaTeach } from "../wannaTeach";
+import { useLockScroll } from "../modalComponent/hook";
 export const ClassesPropgram = () => {
+  const [showModal, setShowModal] = useLockScroll();
   return (
     <div className={styles.container}>
       <h2 className={styles.h2}>ЗАНЯТИЯ</h2>
@@ -26,9 +31,20 @@ export const ClassesPropgram = () => {
             <p className={styles.elem}>Русский Язык</p>
             <p className={styles.elem}>Английский Язык</p>
           </div>
-          <button className={styles.button}>Записаться</button>
+          <button onClick={() => setShowModal(true)} className={styles.button}>
+            Записаться
+          </button>
         </div>
       </div>
+      {showModal && (
+        <Modal
+          onClose={() => {
+            setShowModal(false);
+          }}
+        >
+          <WannaTeach />
+        </Modal>
+      )}
     </div>
   );
 };

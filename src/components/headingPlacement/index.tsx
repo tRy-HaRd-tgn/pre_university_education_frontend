@@ -1,6 +1,11 @@
+"use client";
 import styles from "./styles.module.scss";
 import Image from "next/image";
+import { useLockScroll } from "../modalComponent/hook";
+import Modal from "../modalComponent";
+import { WannaTeach } from "../wannaTeach";
 export const HeadingPlacemnent = () => {
+  const [showModal, setShowModal] = useLockScroll();
   return (
     <div className={styles.container}>
       <Image
@@ -18,11 +23,26 @@ export const HeadingPlacemnent = () => {
           Наш центр занимается повышением квалификации и переподготовкой
           специалистов.
         </p>
-        <button className={styles.button}>
+        <button onClick={() => setShowModal(true)} className={styles.button}>
           записаться{" "}
-          <Image className={styles.buttonImg} src={"/btn.svg"} alt="error" width={40} height={25} />
+          <Image
+            className={styles.buttonImg}
+            src={"/btn.svg"}
+            alt="error"
+            width={40}
+            height={25}
+          />
         </button>
       </div>
+      {showModal && (
+        <Modal
+          onClose={() => {
+            setShowModal(false);
+          }}
+        >
+          <WannaTeach />
+        </Modal>
+      )}
     </div>
   );
 };
