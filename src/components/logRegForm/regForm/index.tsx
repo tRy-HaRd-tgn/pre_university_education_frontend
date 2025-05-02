@@ -8,8 +8,8 @@ export const RegForm = ({ setState }: LogRegFormProps) => {
   return (
     <form className={styles.container}>
       <h2 className={styles.heading}>Регистрация</h2>
-      {placeHolders.map((item) => (
-        <Input className={styles.input} placeholder={item} />
+      {placeHolders.map((item, index) => (
+        <Input key={index} className={styles.input} placeholder={item} />
       ))}
       <Button className={styles.btn}>Зарегистрироваться</Button>
       <p className={styles.text}>
