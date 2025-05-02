@@ -17,8 +17,8 @@ export default class AuthService {
       passwordRepeat,
     });
   }
-  static async login(email: string, password: string, code: number) {
-    return $api.post("/auth/login", { email, password, code });
+  static async login(email: string, password: string) {
+    return $api.post("/auth/login", { email, password });
   }
   static async logout() {
     return $api.post("/auth/logout");

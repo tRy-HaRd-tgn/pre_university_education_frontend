@@ -1,0 +1,51 @@
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+.input {
+  margin-bottom: 2%;
+  width: 70%;
+  font-size: 110%;
+  height: fit-content;
+}
+.heading {
+  margin-top: 5%;
+  margin-bottom: 10%;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 40px;
+  color: #000000;
+}
+.btn {
+  margin-top: 5%;
+}
+.text {
+  margin-top: 5%;
+  text-align: center;
+  width: 70%;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 25px;
+  color: #696969;
+  margin-bottom: 5%;
+}
+.span {
+  margin-top: 5%;
+  text-align: center;
+  width: 70%;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 25px;
+  cursor: pointer;
+  color: black;
+}

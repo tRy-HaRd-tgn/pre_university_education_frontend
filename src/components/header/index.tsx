@@ -4,6 +4,10 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { usePathname } from "next/navigation";
 import { data } from "./data";
+import Modal from "../modalComponent";
+import { useLockScroll } from "../modalComponent/hook";
+import { WannaTeach } from "../wannaTeach";
+import { LogRegForm } from "../logRegForm";
 type Props = {
   flag: boolean;
 };
@@ -12,7 +16,7 @@ const logoStyle = {};
 export const Header = ({ flag }: Props) => {
   const router = useRouter();
   const pathName = usePathname();
-  console.log(pathName);
+  const [showModal, setShowModal] = useLockScroll();
   return (
     <header className={flag ? styles.header : styles.headerB}>
       <div className={styles.content}>
@@ -97,10 +101,22 @@ export const Header = ({ flag }: Props) => {
               Расписание
             </p>
           </div>
-          <button className={!flag ? styles.buttonB : styles.button}>
+          <button
+            onClick={() => setShowModal(true)}
+            className={!flag ? styles.buttonB : styles.button}
+          >
             Войти
           </button>
         </div>
+        {showModal && (
+          <Modal
+            onClose={() => {
+              setShowModal(false);
+            }}
+          >
+            <LogRegForm />
+          </Modal>
+        )}
       </div>
     </header>
   );

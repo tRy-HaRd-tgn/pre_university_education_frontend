@@ -9,11 +9,16 @@ const Modal = ({ onClose, children, title }: any) => {
   };
 
   const modalContent = (
-    <div className="modal-overlay">
-      <div className="modal-wrapper">
+    <div onMouseDown={handleCloseClick} className="modal-overlay">
+      <div
+        onMouseDown={(e) => {
+          e.stopPropagation();
+        }}
+        className="modal-wrapper"
+      >
         <div className="modal">
           <div className="modal-header">
-            <a href="#" onClick={handleCloseClick}>
+            <a href="#" onMouseDown={handleCloseClick}>
               <Image
                 src={"/cross.svg"}
                 alt="error"
