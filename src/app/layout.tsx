@@ -1,6 +1,10 @@
-import type { Metadata } from "next";
+"use client";
+
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Provider } from "react-redux";
+import { store } from "../../store";
+import { Toaster } from "sonner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -12,24 +16,22 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "ЮФУ довузовская подготовка",
-  description: "Создано it-кооперацией right wing it",
-};
-
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ru">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-        <div id="modal-root"></div>
-      </body>
-    </html>
+    <Provider store={store}>
+      <html lang="ru">
+        <body
+          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        >
+          {children}
+          <div id="modal-root"></div>
+        </body>
+      </html>
+      <Toaster />
+    </Provider>
   );
 }

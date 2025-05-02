@@ -3,8 +3,24 @@ import styles from "./styles.module.scss";
 import Modal from "../modalComponent";
 import { WannaTeach } from "../wannaTeach";
 import { useLockScroll } from "../modalComponent/hook";
+import { useSelector } from "react-redux";
+import { toast, Toaster } from "sonner";
 export const ClassesPropgram = () => {
   const [showModal, setShowModal] = useLockScroll();
+  const auth = useSelector((state: any) => state.userSlice.auth);
+  const checkModal = () => {
+    if (auth) {
+      setShowModal(true);
+    } else {
+      toast("Запись", {
+        description: "Для записи вам необходимо авторизироваться",
+        action: {
+          label: "скрыть",
+          onClick: () => console.log("Undo"),
+        },
+      });
+    }
+  };
   return (
     <div className={styles.container}>
       <h2 className={styles.h2}>ЗАНЯТИЯ</h2>
@@ -31,7 +47,7 @@ export const ClassesPropgram = () => {
             <p className={styles.elem}>Русский Язык</p>
             <p className={styles.elem}>Английский Язык</p>
           </div>
-          <button onClick={() => setShowModal(true)} className={styles.button}>
+          <button onClick={checkModal} className={styles.button}>
             Записаться
           </button>
         </div>

@@ -1,12 +1,16 @@
 import styles from "./main-page.module.scss";
 import { Header } from "@/components/header";
-import { LogosPlacements } from "@/components/logosPlacements";
+import { Metadata } from "next";
 import { CoursePlacement } from "@/components/coursePlacements";
 import { WebinarPlacements } from "@/components/webinarPlacements";
 import { RewiewsPlacements } from "@/components/reviewsPlacements";
 import { UfuDescription } from "@/components/ufuDescription";
 import { Footer } from "@/components/footer";
-// main page
+
+export const metadata: Metadata = {
+  title: "ЮФУ довузовская подготовка",
+  description: "Создано it-кооперацией right wing it",
+};
 export default function Home() {
   return (
     <div className={styles.container}>
