@@ -1,7 +1,13 @@
+"use client";
 import styles from "./styles.module.scss";
 import Image from "next/image";
 import { RainbowProps } from "@/types/rainbowPropos";
+import { useLockScroll } from "../modalComponent/hook";
+import { WannaTeach } from "../wannaTeach";
+import Modal from "../modalComponent";
+
 export const RainbowPlacement = ({ img }: RainbowProps) => {
+  const [showModal, setShowModal] = useLockScroll();
   return (
     <div className={styles.container}>
       <Image
@@ -19,8 +25,19 @@ export const RainbowPlacement = ({ img }: RainbowProps) => {
         height={1800}
         className={styles.blue}
       />
-      <button className={styles.button}>Хочу заниматься</button>
+      <button onClick={() => setShowModal(true)} className={styles.button}>
+        Хочу заниматься
+      </button>
       <p className={styles.text}>ОТКРОЙ МИР ЗНАНИЙ </p>
+      {showModal && (
+        <Modal
+          onClose={() => {
+            setShowModal(false);
+          }}
+        >
+          <WannaTeach />
+        </Modal>
+      )}
     </div>
   );
 };
