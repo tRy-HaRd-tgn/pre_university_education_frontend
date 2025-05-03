@@ -3,13 +3,14 @@ import { PrivateRoute } from "@/components/privateRoute";
 import { Header } from "@/components/header";
 import { ProfileLogo } from "@/components/profileLogo";
 import { Input } from "@/components/ui/input";
+import { Footer } from "@/components/footer";
 import { data } from "./data";
 import { ButtonsWrapper } from "@/components/buttonsWrapper";
 
 export default function Page() {
   return (
     <PrivateRoute>
-      <Header flag={true}></Header>
+      <Header flag={true} />
       <div className={styles.container}>
         <div className={styles.leftSide}>
           <ProfileLogo img={"/profile.png"} />
@@ -25,6 +26,7 @@ export default function Page() {
           <ButtonsWrapper />
         </div>
       </div>
+      <Footer />
     </PrivateRoute>
   );
 }

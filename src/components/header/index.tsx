@@ -47,7 +47,11 @@ export const Header = ({ flag }: Props) => {
             </p>
             {pathName === "/coursePage" ||
             pathName === "/rainbow" ||
-            pathName === "/exam" ? (
+            pathName === "/profile" ||
+            pathName === "/themes" ||
+            pathName === "/exam" ||
+            pathName === "/defense" ||
+            pathName === "/position" ? (
               <></>
             ) : (
               <p
@@ -59,7 +63,12 @@ export const Header = ({ flag }: Props) => {
                 Курсы
               </p>
             )}
-            {pathName === "/" || pathName === "/coursePage" ? (
+            {pathName === "/" ||
+            pathName === "/coursePage" ||
+            pathName === "/profile" ||
+            pathName === "/themes" ||
+            pathName === "/defense" ||
+            pathName === "/position" ? (
               <></>
             ) : (
               <p
@@ -72,7 +81,11 @@ export const Header = ({ flag }: Props) => {
               </p>
             )}
 
-            {pathName === "/coursePage" ? (
+            {pathName === "/coursePage" ||
+            pathName === "/profile" ||
+            pathName === "/themes" ||
+            pathName === "/defense" ||
+            pathName === "/position" ? (
               <></>
             ) : (
               <p

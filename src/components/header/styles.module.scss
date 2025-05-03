@@ -74,6 +74,7 @@
   color: black;
 }
 .button {
+  min-width: 100px;
   background: linear-gradient(
     180deg,
     rgba(205, 205, 205, 0.27) 0%,
@@ -93,6 +94,7 @@
   color: #5a5959;
 }
 .buttonB {
+  min-width: 100px;
   background: linear-gradient(
     380deg,
     rgba(205, 205, 205, 0.27) 0%,

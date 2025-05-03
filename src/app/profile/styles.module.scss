@@ -2,8 +2,9 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  width: 100vw;
+  width: auto;
   height: 85vh;
+  min-height: 500px;
 }
 .leftSide {
   width: 28%;
