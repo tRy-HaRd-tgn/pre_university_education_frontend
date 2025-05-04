@@ -10,8 +10,11 @@ import {
 import Image from "next/image";
 import { data } from "./data";
 import { Teacher } from "./teacher";
+import { useSelector } from "react-redux";
+import { toast } from "sonner";
 
 export const RewiewsPlacements = () => {
+  const auth = useSelector((state: any) => state.userSlice.auth);
   return (
     <div className={styles.container} id="reviews">
       <div className={styles.content}>
@@ -36,6 +39,18 @@ export const RewiewsPlacements = () => {
         </div>
         <div className={styles.rightSide}>
           <Image
+            onClick={() => {
+              if (auth) {
+              } else {
+                toast("Запись", {
+                  description: "Для отзыва вам необходимо авторизироваться",
+                  action: {
+                    label: "скрыть",
+                    onClick: () => console.log("Undo"),
+                  },
+                });
+              }
+            }}
             className={styles.arrow}
             src={"/arrow.svg"}
             width={100}

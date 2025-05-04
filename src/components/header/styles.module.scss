@@ -41,7 +41,7 @@
   width: 80%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 .menuContent {
   display: flex;
@@ -120,4 +120,48 @@
 .button:hover {
   color: white;
   background-color: black;
+}
+.profileWrapper {
+  width: fit-content;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.leftSide {
+  width: 50%;
+  display: flex;
+  margin-right: 25px;
+  flex-direction: column;
+}
+.p {
+  color: black;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  cursor: default;
+  text-align: right;
+}
+.profileButton {
+  cursor: pointer;
+  margin-right: 15px;
+}
+.profileButtonB {
+  cursor: pointer;
+  margin-right: 15px;
+  color: black;
+  background-color: white;
+}
+.profileButtonB:hover {
+  background-color: bisque;
+}
+.pB {
+  color: white;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  cursor: default;
+  text-align: right;
 }

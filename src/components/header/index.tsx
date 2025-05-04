@@ -6,8 +6,10 @@ import { usePathname } from "next/navigation";
 import { data } from "./data";
 import Modal from "../modalComponent";
 import { useLockScroll } from "../modalComponent/hook";
-import { WannaTeach } from "../wannaTeach";
 import { LogRegForm } from "../logRegForm";
+import { useSelector } from "react-redux";
+import { useState } from "react";
+import { Button } from "../ui/button";
 type Props = {
   flag: boolean;
 };
@@ -17,6 +19,9 @@ export const Header = ({ flag }: Props) => {
   const router = useRouter();
   const pathName = usePathname();
   const [showModal, setShowModal] = useLockScroll();
+  const auth = useSelector((state: any) => state.userSlice.auth);
+  const [name, setName] = useState("undefined");
+  const [surname, setSurname] = useState("undefined");
   return (
     <header className={flag ? styles.header : styles.headerB}>
       <div className={styles.content}>
@@ -114,12 +119,34 @@ export const Header = ({ flag }: Props) => {
               Расписание
             </p>
           </div>
-          <button
-            onClick={() => setShowModal(true)}
-            className={!flag ? styles.buttonB : styles.button}
-          >
-            Войти
-          </button>
+          {!auth ? (
+            <button
+              onClick={() => setShowModal(true)}
+              className={!flag ? styles.buttonB : styles.button}
+            >
+              Войти
+            </button>
+          ) : (
+            <div className={styles.profileWrapper}>
+              <div className={styles.leftSide}>
+                <p className={flag ? styles.p : styles.pB}>{name}</p>
+                <p className={flag ? styles.p : styles.pB}>{surname}</p>
+              </div>
+              <Button
+                className={flag ? styles.profileButton : styles.profileButtonB}
+                onClick={() => {
+                  router.replace("/profile");
+                }}
+              >
+                Профиль
+              </Button>
+              <Button
+                className={flag ? styles.profileButton : styles.profileButtonB}
+              >
+                Выйти
+              </Button>
+            </div>
+          )}
         </div>
         {showModal && (
           <Modal

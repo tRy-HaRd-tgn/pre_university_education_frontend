@@ -5,4 +5,8 @@ export const urls = [
     text: "ПОЛОЖЕНИЕ",
     url: "/position",
   },
+  {
+    text: "ЛИТЕРАТУРА",
+    url: "https://mrcpk.tgn.sfedu.ru/docs/lit_ur.htm#teor2",
+  },
 ];
