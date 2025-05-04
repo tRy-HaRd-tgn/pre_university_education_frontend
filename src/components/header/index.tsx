@@ -8,8 +8,10 @@ import Modal from "../modalComponent";
 import { useLockScroll } from "../modalComponent/hook";
 import { LogRegForm } from "../logRegForm";
 import { useSelector } from "react-redux";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "../ui/button";
+import AuthService from "@/service/authService";
+import { UseSelector } from "react-redux";
 type Props = {
   flag: boolean;
 };
@@ -20,8 +22,8 @@ export const Header = ({ flag }: Props) => {
   const pathName = usePathname();
   const [showModal, setShowModal] = useLockScroll();
   const auth = useSelector((state: any) => state.userSlice.auth);
-  const [name, setName] = useState("undefined");
-  const [surname, setSurname] = useState("undefined");
+  const name = useSelector((state: any) => state.userSlice.name);
+  const surname = useSelector((state: any) => state.userSlice.surname);
   return (
     <header className={flag ? styles.header : styles.headerB}>
       <div className={styles.content}>
@@ -142,6 +144,9 @@ export const Header = ({ flag }: Props) => {
               </Button>
               <Button
                 className={flag ? styles.profileButton : styles.profileButtonB}
+                onClick={async () => {
+                  await AuthService.logout();
+                }}
               >
                 Выйти
               </Button>

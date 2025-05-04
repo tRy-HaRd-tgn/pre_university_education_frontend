@@ -81,7 +81,15 @@ export const RegForm = ({ setState }: LogRegFormProps) => {
     <form onSubmit={handleSubmit(onSubmit)} className={styles.container}>
       <h2 className={styles.heading}>Регистрация</h2>
       {placeHolders.map((item, index) => (
-        <>
+        <div
+          style={{
+            width: "70%",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+          key={index}
+        >
           <Input
             type={item.type}
             {...register(item.name)}
@@ -95,7 +103,7 @@ export const RegForm = ({ setState }: LogRegFormProps) => {
           {errors[item.name] && (
             <p className={styles.error}>{errors[item.name]?.message}</p>
           )}
-        </>
+        </div>
       ))}
       {errors.root && <p className={styles.error}>{errors.root?.message}</p>}
       {success && (

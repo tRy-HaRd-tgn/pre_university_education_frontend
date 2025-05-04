@@ -5,6 +5,7 @@ import "./globals.css";
 import { Provider } from "react-redux";
 import { store } from "../../store";
 import { Toaster } from "sonner";
+import { StoreProvider } from "@/components/storeProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,15 +24,17 @@ export default function RootLayout({
 }>) {
   return (
     <Provider store={store}>
-      <html lang="ru">
-        <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-        >
-          {children}
-          <div id="modal-root"></div>
-        </body>
-      </html>
-      <Toaster />
+      <StoreProvider>
+        <html lang="ru">
+          <body
+            className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+          >
+            {children}
+            <div id="modal-root" />
+          </body>
+        </html>
+        <Toaster />
+      </StoreProvider>
     </Provider>
   );
 }
