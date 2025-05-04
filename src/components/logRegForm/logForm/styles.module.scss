@@ -49,3 +49,12 @@
   cursor: pointer;
   color: black;
 }
+.buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.error {
+  margin-bottom: 2%;
+  color: red;
+}
