@@ -146,6 +146,7 @@ export const Header = ({ flag }: Props) => {
                 className={flag ? styles.profileButton : styles.profileButtonB}
                 onClick={async () => {
                   await AuthService.logout();
+                  window.location.reload();
                 }}
               >
                 Выйти

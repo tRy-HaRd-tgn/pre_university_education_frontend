@@ -7,8 +7,9 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import AuthService from "@/service/authService";
 import { useDispatch } from "react-redux";
-import { updateAuth } from "../../../../store/slices/userSlice";
+import { updateAuth, updateUserInfo } from "../../../../store/slices/userSlice";
 import { useRouter } from "next/navigation";
+import UsersService from "@/service/usersService";
 
 export const LogForm = ({ setState }: LogRegFormProps) => {
   const router = useRouter();
@@ -26,12 +27,31 @@ export const LogForm = ({ setState }: LogRegFormProps) => {
   } = useForm<LoginFormData>({
     resolver: zodResolver(loginSchema),
   });
+  async function getUserProfile() {
+    try {
+      const response = await UsersService.getUserProfile();
+      console.log(response);
+      dispatch(
+        updateUserInfo({
+          name: response.data.name,
+          surname: response.data.surname,
+          patronymic: response.data.patronymic,
+          picture: response.data.picture,
+          email: response.data.email,
+        })
+      );
+      dispatch(updateAuth(true));
+    } catch (e) {
+      console.log(e);
+    }
+  }
   const onSubmit = async (data: LoginFormData) => {
     try {
       setError("root", { message: "" });
       const response = await AuthService.login(data.email, data.password);
       dispatch(updateAuth(true));
       router.replace("/profile");
+      getUserProfile();
       console.log("Успешный вход:", response.data);
     } catch (error) {
       setError("root", { message: "Неправильная почта или пароль" });

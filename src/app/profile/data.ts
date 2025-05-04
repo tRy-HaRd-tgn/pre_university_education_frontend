@@ -1,5 +1,5 @@
 export const data = [
-  { placeholder: "Имя" },
-  { placeholder: "Фамилия" },
-  { placeholder: "Отчество" },
+  { placeholder: "Имя", type: "name" },
+  { placeholder: "Фамилия", type: "surname" },
+  { placeholder: "Отчество", type: "patronymic" },
 ];
