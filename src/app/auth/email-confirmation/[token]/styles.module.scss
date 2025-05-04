@@ -1,0 +1,40 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.success {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 66px;
+  /* or 103% */
+  text-align: center;
+
+  color: #000000;
+  width: 50%;
+}
+.error {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 66px;
+  text-align: center;
+
+  color: red;
+  width: 50%;
+}
+.a {
+  margin-top: 5%;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 54px;
+  line-height: 66px;
+  text-decoration: underline;
+}

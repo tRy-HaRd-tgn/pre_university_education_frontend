@@ -23,4 +23,7 @@ export default class AuthService {
   static async logout() {
     return $api.post("/auth/logout");
   }
+  static async confirmEmail(token: string) {
+    return $api.post("/auth/email-confirmation", { token });
+  }
 }

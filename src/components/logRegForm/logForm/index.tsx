@@ -6,8 +6,13 @@ import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import AuthService from "@/service/authService";
+import { useDispatch } from "react-redux";
+import { updateAuth } from "../../../../store/slices/userSlice";
+import { useRouter } from "next/navigation";
 
 export const LogForm = ({ setState }: LogRegFormProps) => {
+  const router = useRouter();
+  const dispatch = useDispatch();
   const loginSchema = z.object({
     email: z.string().email("Некорректный email"),
     password: z.string().min(6, "Пароль должен быть не менее 6 символов"),
@@ -25,6 +30,8 @@ export const LogForm = ({ setState }: LogRegFormProps) => {
     try {
       setError("root", { message: "" });
       const response = await AuthService.login(data.email, data.password);
+      dispatch(updateAuth(true));
+      router.replace("/profile");
       console.log("Успешный вход:", response.data);
     } catch (error) {
       setError("root", { message: "Неправильная почта или пароль" });
