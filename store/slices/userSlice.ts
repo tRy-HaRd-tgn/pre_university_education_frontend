@@ -34,8 +34,13 @@ export const userSlice = createSlice({
       state.picture = action.payload.picture;
       state.email = action.payload.email;
     },
+    updateFIO: (state, action: PayloadAction<UserState>) => {
+      state.name = action.payload.name;
+      state.surname = action.payload.surname;
+      state.patronymic = action.payload.patronymic;
+    },
   },
 });
 
-export const { updateAuth, updateUserInfo } = userSlice.actions;
+export const { updateAuth, updateUserInfo, updateFIO } = userSlice.actions;
 export default userSlice.reducer;

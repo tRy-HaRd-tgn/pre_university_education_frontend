@@ -5,18 +5,23 @@ import { Header } from "@/components/header";
 import { ProfileLogo } from "@/components/profileLogo";
 import { Input } from "@/components/ui/input";
 import { Footer } from "@/components/footer";
-import { data } from "./data";
 import { ButtonsWrapper } from "@/components/buttonsWrapper";
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import UsersService from "@/service/usersService";
+import { useDispatch } from "react-redux";
+import { updateFIO } from "../../../store/slices/userSlice";
 
 export default function Page() {
+  const dispatch = useDispatch();
   const [profile, setProfile] = useState({});
   const [name, setName] = useState("");
   const [surname, setSurname] = useState("");
   const [patronymic, setPatronymic] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(false);
 
   const userName = useSelector((state: any) => state.userSlice.name);
   const userSurname = useSelector((state: any) => state.userSlice.surname);
@@ -69,7 +74,31 @@ export default function Page() {
               placeholder={key}
             />
           ))}
-          <Button className={styles.button}>Cохранить</Button>
+          <div>
+            <Button
+              disabled={isLoading}
+              onClick={async () => {
+                try {
+                  setError(false);
+                  setIsLoading(true);
+                  await UsersService.updateUserProfile(
+                    name,
+                    surname,
+                    patronymic
+                  );
+                  dispatch(updateFIO({ name, surname, patronymic }));
+                  setIsLoading(false);
+                } catch (e) {
+                  setIsLoading(false);
+                  setError(true);
+                }
+              }}
+              className={styles.button}
+            >
+              {isLoading ? "Загрузка..." : "Сохранить"}
+            </Button>
+            {error && <p className={styles.error}>Произошла ошибка</p>}
+          </div>
           <ButtonsWrapper />
         </div>
       </div>
