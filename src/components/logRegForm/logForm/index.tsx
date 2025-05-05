@@ -84,7 +84,7 @@ export const LogForm = ({ setState }: LogRegFormProps) => {
       )}
       {errors.root && <p className={styles.error}>{errors.root.message}</p>}
       <div className={styles.buttons}>
-        <Button type="submit" className={styles.btn}>
+        <Button disabled={isSubmitting} type="submit" className={styles.btn}>
           {isSubmitting ? "Вход..." : "Войти"}
         </Button>
         <Button type="button" className={styles.btn}>

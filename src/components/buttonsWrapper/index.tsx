@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 export const ButtonsWrapper = () => {
   const router = useRouter();
   return (
-    <>
+    <div className={styles.container}>
       {urls.map((item, index) => (
         <div key={index} className={styles.buttonWrapper}>
           <Button
@@ -20,6 +20,6 @@ export const ButtonsWrapper = () => {
           </Button>
         </div>
       ))}
-    </>
+    </div>
   );
 };

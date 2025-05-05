@@ -109,7 +109,7 @@ export const RegForm = ({ setState }: LogRegFormProps) => {
       {success && (
         <p className={styles.success}>На почту вам направлено сообщение</p>
       )}
-      <Button type="submit" className={styles.btn}>
+      <Button disabled={isSubmitting} type="submit" className={styles.btn}>
         {isSubmitting ? "Загрузка..." : "Зарегистрироваться"}
       </Button>
       <p className={styles.text}>
