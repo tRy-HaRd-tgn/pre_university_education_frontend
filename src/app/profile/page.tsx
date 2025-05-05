@@ -71,7 +71,7 @@ export default function Page() {
           <ProfileLogo img={img} />
           <Popover>
             <PopoverTrigger className={styles.trigger}>
-              Курсы, а которые вы записаны
+              Курсы, на которые вы записаны
             </PopoverTrigger>
             <PopoverContent>Place content for the popover here.</PopoverContent>
           </Popover>
