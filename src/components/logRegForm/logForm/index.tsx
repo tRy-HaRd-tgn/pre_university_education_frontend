@@ -87,7 +87,11 @@ export const LogForm = ({ setState }: LogRegFormProps) => {
         <Button disabled={isSubmitting} type="submit" className={styles.btn}>
           {isSubmitting ? "Вход..." : "Войти"}
         </Button>
-        <Button type="button" className={styles.btn}>
+        <Button
+          onClick={() => router.replace("/forgotPassword")}
+          type="button"
+          className={styles.btn}
+        >
           Забыли пароль
         </Button>
       </div>

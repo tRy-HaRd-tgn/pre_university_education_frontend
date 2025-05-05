@@ -37,13 +37,7 @@ export const StoreProvider = ({ children }: PrivateRouteProps) => {
 
   return (
     <>
-      {loading ? (
-        <html className={styles.container}>
-          <body>loading</body>
-        </html>
-      ) : (
-        children
-      )}
+      {loading ? <div className={styles.container}>loading...</div> : children}
     </>
   );
 };

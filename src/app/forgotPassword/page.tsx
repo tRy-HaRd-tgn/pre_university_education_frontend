@@ -1,4 +1,4 @@
-import styles from "./page.module.css";
+import styles from "./styles.module.scss";
 export default function Page() {
   return (
     <div className={styles.container}>

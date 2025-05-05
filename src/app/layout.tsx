@@ -24,17 +24,15 @@ export default function RootLayout({
 }>) {
   return (
     <Provider store={store}>
-      <StoreProvider>
-        <html lang="ru">
-          <body
-            className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-          >
-            {children}
-            <div id="modal-root" />
-          </body>
-        </html>
-        <Toaster />
-      </StoreProvider>
+      <html lang="ru">
+        <body
+          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        >
+          <StoreProvider>{children}</StoreProvider>
+          <div id="modal-root" />
+        </body>
+      </html>
+      <Toaster />
     </Provider>
   );
 }
