@@ -13,6 +13,11 @@ import { Button } from "@/components/ui/button";
 import UsersService from "@/service/usersService";
 import { useDispatch } from "react-redux";
 import { updateFIO } from "../../../store/slices/userSlice";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
 
 export default function Page() {
   const dispatch = useDispatch();
@@ -64,6 +69,12 @@ export default function Page() {
       <div className={styles.container}>
         <div className={styles.leftSide}>
           <ProfileLogo img={img} />
+          <Popover>
+            <PopoverTrigger className={styles.trigger}>
+              Курсы, а которые вы записаны
+            </PopoverTrigger>
+            <PopoverContent>Place content for the popover here.</PopoverContent>
+          </Popover>
         </div>
         <div className={styles.rightSide}>
           {Object.entries(profile).map(([key, value]) => (

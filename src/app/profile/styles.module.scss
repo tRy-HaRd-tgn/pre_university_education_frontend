@@ -12,8 +12,9 @@
   background-color: grey;
   border-radius: 15px;
   display: flex;
-  justify-content: center;
+  align-items: center;
   padding-top: 3%;
+  flex-direction: column;
 }
 .rightSide {
   width: 50%;
@@ -41,4 +42,14 @@
 }
 .button {
   cursor: pointer;
+}
+.trigger {
+  background-color: black;
+  color: white;
+  margin-top: 25%;
+  width: fit-content;
+  height: fit-content;
+  padding: 15px;
+  border-radius: 25px;
+  font-size: 120%;
 }
