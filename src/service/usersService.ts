@@ -11,10 +11,14 @@ export default class UsersService {
   ) {
     return $api.patch("/users/profile", { name, surname, patronymic });
   }
-  static async updateProfilePicture(file: File) {
+  static async updateProfilePicture(file: any) {
     const formData = new FormData();
     formData.append("file", file);
-    return $api.patch("/users/profile/picture", formData);
+    return $api.patch("/users/profile/picture", formData, {
+      headers: {
+        "Content-Type": "multipart/form-data",
+      },
+    });
   }
   static async sendReview(review: string, category: string) {
     return $api.post("/users/reviews", { text: review, category });

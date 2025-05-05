@@ -28,6 +28,7 @@ export default function Page() {
   const userPatronymic = useSelector(
     (state: any) => state.userSlice.patronymic
   );
+  const img = useSelector((state: any) => state.userSlice.picture);
 
   useEffect(() => {
     setName(userName);
@@ -62,7 +63,7 @@ export default function Page() {
       <Header flag={true} />
       <div className={styles.container}>
         <div className={styles.leftSide}>
-          <ProfileLogo img={"/profile.png"} />
+          <ProfileLogo img={img} />
         </div>
         <div className={styles.rightSide}>
           {Object.entries(profile).map(([key, value]) => (
