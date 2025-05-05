@@ -1,12 +1,15 @@
 "use client";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import UsersService from "@/service/usersService";
 import { updateAuth, updateUserInfo } from "../../../store/slices/userSlice";
+import styles from "./styles.module.scss";
+
 interface PrivateRouteProps {
   children: React.ReactNode;
 }
 export const StoreProvider = ({ children }: PrivateRouteProps) => {
+  const [loading, setLoading] = useState(true);
   const dispatch = useDispatch();
   async function getUserProfile() {
     try {
@@ -22,12 +25,25 @@ export const StoreProvider = ({ children }: PrivateRouteProps) => {
         })
       );
       dispatch(updateAuth(true));
+      setLoading(false);
     } catch (e) {
       console.log(e);
+      setLoading(false);
     }
   }
   useEffect(() => {
     getUserProfile();
   }, []);
-  return <>{children}</>;
+
+  return (
+    <>
+      {loading ? (
+        <html className={styles.container}>
+          <body>loading</body>
+        </html>
+      ) : (
+        children
+      )}
+    </>
+  );
 };
