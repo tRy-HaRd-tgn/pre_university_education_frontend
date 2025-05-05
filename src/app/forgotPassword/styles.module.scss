@@ -5,9 +5,38 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  background-color: black;
 }
 .form {
-  width: 50%;
-  height: 50%;
-  background-color: black;
+  position: relative;
+  width: 40%;
+  height: 70%;
+  border-radius: 5%;
+  background-color: white;
+  min-width: 600px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  min-height: 550px;
+}
+.heading {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 54px;
+  line-height: 66px;
+  text-align: center;
+  color: #000000;
+  width: fit-content;
+  max-width: 90%;
+}
+.backButton {
+  position: absolute;
+  top: 2%;
+  right: 5%;
+  cursor: pointer;
+}
+.input {
+  width: 70%;
 }
