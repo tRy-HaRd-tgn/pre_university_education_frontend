@@ -1,9 +1,9 @@
 import $api from "../http";
 export default class ReviewsService {
-	static async getReviews() {
-		return $api.get(`/reviews`);
-	}
-	static async getReview(id: string) {
-		return $api.get(`/reviews/${id}`);
-	}
+  static async getReviews(category: string) {
+    return $api.get(`/reviews`, { params: { category } });
+  }
+  static async getReview(id: string) {
+    return $api.get(`/reviews/${id}`);
+  }
 }

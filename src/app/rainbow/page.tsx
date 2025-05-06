@@ -6,7 +6,8 @@ import { ClassesPropgram } from "@/components/classesProgram";
 import { RewiewsPlacements } from "@/components/reviewsPlacements";
 import { TeachersPlacement } from "@/components/teachersPlacement";
 import { Footer } from "@/components/footer";
-export default function Page() {
+
+export default async function Page() {
   return (
     <div className={styles.container}>
       <Header flag={true} />
@@ -20,10 +21,10 @@ export default function Page() {
         <ClassesPropgram />
       </div>
       <div className={styles.teachersPlacement}>
-        <TeachersPlacement />
+        <TeachersPlacement category={"RAINBOW"} />
       </div>
       <div className={styles.reviews}>
-        <RewiewsPlacements />
+        <RewiewsPlacements category={"RAINBOW"} />
       </div>
       <Footer />
     </div>

@@ -7,8 +7,12 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Teacher } from "./teacher";
-import { data } from "./data";
-export const TeachersPlacement = () => {
+import TeachersService from "@/service/teachersService";
+export const TeachersPlacement = async ({ category }: any) => {
+  const response = await TeachersService.getTeachers("RAINBOW");
+  const data = response.data;
+
+  console.log(data);
   return (
     <div className={styles.container} id="teachers">
       <h3 className={styles.heading}>
@@ -17,7 +21,7 @@ export const TeachersPlacement = () => {
       <div className={styles.content}>
         <Carousel className={styles.carousel}>
           <CarouselContent className={styles.carouselContent}>
-            {data.map((item, index) => {
+            {data?.map((item: any, index: any) => {
               return (
                 <CarouselItem className={styles.carouselItem} key={index}>
                   <Teacher

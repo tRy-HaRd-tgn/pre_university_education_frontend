@@ -13,7 +13,7 @@ import { Teacher } from "./teacher";
 import { useSelector } from "react-redux";
 import { toast } from "sonner";
 
-export const RewiewsPlacements = () => {
+export const RewiewsPlacements = ({ rewiews }: any) => {
   const auth = useSelector((state: any) => state.userSlice.auth);
   return (
     <div className={styles.container} id="reviews">
