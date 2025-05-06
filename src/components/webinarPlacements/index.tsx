@@ -1,9 +1,11 @@
 import styles from "./styles.module.scss";
 import Image from "next/image";
-
+import WebinarService from "@/service/webinarService";
 import { Webinar } from "./webinar";
 
-export const WebinarPlacements = () => {
+export const WebinarPlacements = async () => {
+  const response = await WebinarService.getWebinars();
+  const data = response.data;
   return (
     <div className={styles.container}>
       <Image
@@ -16,14 +18,14 @@ export const WebinarPlacements = () => {
       />
       <div className={styles.rightSide}>
         <div className={styles.webinarsScroller}>
-          {data?.map((item, index) => {
+          {data?.map((item: any, index: any) => {
             return (
               <Webinar
                 key={index}
-                heading={item.heading}
+                heading={item.title}
                 description={item.description}
-                time={item.time}
-                type={item.type}
+                time={item.date}
+                type={item.status}
               />
             );
           })}
