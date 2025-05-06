@@ -14,7 +14,7 @@ export const Teacher = ({
     <div className={styles.container}>
       <Image
         className={styles.img}
-        src={`/${img}`}
+        src={img}
         alt="error"
         width={1500}
         height={1500}

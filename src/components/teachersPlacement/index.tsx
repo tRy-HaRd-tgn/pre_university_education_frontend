@@ -19,20 +19,27 @@ export const TeachersPlacement = async ({ category }: any) => {
         НАШИ <span className={styles.headingSpan}>ПРЕПОДАВАТЕЛИ</span>
       </h3>
       <div className={styles.content}>
-        <Carousel className={styles.carousel}>
-          <CarouselContent className={styles.carouselContent}>
+        <Carousel className="w-full">
+          <CarouselContent className="-ml-1">
             {data?.map((item: any, index: any) => {
               return (
-                <CarouselItem className={styles.carouselItem} key={index}>
-                  <Teacher
-                    info={item.info}
-                    subject={item.subject}
-                    exam={item.exam}
-                    years={item.years}
-                    balls={item.balls}
-                    img={item.img}
-                    description={item.description}
-                  />
+                <CarouselItem
+                  className="pl-1 md:basis-1/2 lg:basis-1/4"
+                  key={index}
+                >
+                  <div className="p-7">
+                    <Teacher
+                      info={
+                        item.surname + " " + item.name + " " + item.patronymic
+                      }
+                      subject={item.direction}
+                      exam={"ЕГЭ"}
+                      years={item.experience}
+                      balls={item.egeScore}
+                      img={item.picture}
+                      description={item.description}
+                    />
+                  </div>
                 </CarouselItem>
               );
             })}
