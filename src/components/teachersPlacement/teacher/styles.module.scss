@@ -6,11 +6,14 @@
   background: #ebebeb;
   border-radius: 14px;
   height: 100%;
+  min-width: 200px;
+  padding-top: 5%;
 }
 .img {
   width: 200px;
   height: 200px;
   margin-bottom: 2%;
+  border-radius: 14px;
 }
 .info {
   font-family: "Inter";
