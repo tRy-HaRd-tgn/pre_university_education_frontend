@@ -20,10 +20,10 @@ export default function Page() {
         <ExamChoise />
       </div>
       <div className={styles.teachers}>
-        <TeachersPlacement />
+        <TeachersPlacement category={"EXAM"} />
       </div>
       <div className={styles.reviews}>
-        <RewiewsPlacements />
+        <RewiewsPlacements category={"EXAM"} />
       </div>
       <Footer />
     </div>

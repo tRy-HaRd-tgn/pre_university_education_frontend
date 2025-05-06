@@ -9,7 +9,7 @@ import {
 import { Teacher } from "./teacher";
 import TeachersService from "@/service/teachersService";
 export const TeachersPlacement = async ({ category }: any) => {
-  const response = await TeachersService.getTeachers("RAINBOW");
+  const response = await TeachersService.getTeachers(category);
   const data = response.data;
 
   console.log(data);
@@ -24,7 +24,7 @@ export const TeachersPlacement = async ({ category }: any) => {
             {data?.map((item: any, index: any) => {
               return (
                 <CarouselItem
-                  className="pl-1 md:basis-1/2 lg:basis-1/4"
+                  className="pl-5 md:basis-1/2 lg:basis-1/4"
                   key={index}
                 >
                   <div className="p-7">

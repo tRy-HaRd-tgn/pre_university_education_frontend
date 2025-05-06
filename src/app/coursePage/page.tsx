@@ -4,6 +4,7 @@ import { HeadingPlacemnent } from "@/components/headingPlacement";
 import { Education } from "@/components/eduction";
 import { QuestionsPlacement } from "@/components/questionPlacement";
 import { Footer } from "@/components/footer";
+import { TeachersPlacement } from "@/components/teachersPlacement";
 export default function CoursePage() {
   return (
     <div className={styles.container}>
@@ -20,6 +21,9 @@ export default function CoursePage() {
           <h2 className={styles.questionsHeading}>Часто задаваемые вопросы</h2>
           <QuestionsPlacement />
         </div>
+      </div>
+      <div className={styles.teachersWrapper}>
+        <TeachersPlacement category={"EDUCATION"} />
       </div>
       <Footer />
     </div>
