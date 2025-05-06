@@ -1,0 +1,29 @@
+.carousel {
+  height: 100%;
+  width: 80%;
+}
+.carouselContent {
+  height: 360px;
+  display: flex;
+  align-items: center;
+}
+.previous {
+  content: url("/before.svg");
+  border: none;
+  width: 26px;
+  height: 20px;
+}
+.previous:hover {
+  cursor: pointer;
+  background-color: none;
+}
+.next {
+  content: url("/after.svg");
+  border: none;
+  width: 26px;
+  height: 20px;
+}
+.next:hover {
+  cursor: pointer;
+  background-color: none;
+}

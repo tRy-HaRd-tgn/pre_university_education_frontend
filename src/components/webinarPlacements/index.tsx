@@ -1,6 +1,6 @@
 import styles from "./styles.module.scss";
 import Image from "next/image";
-import { data } from "./data";
+
 import { Webinar } from "./webinar";
 
 export const WebinarPlacements = () => {
@@ -24,7 +24,7 @@ export const WebinarPlacements = () => {
                 description={item.description}
                 time={item.time}
                 type={item.type}
-              ></Webinar>
+              />
             );
           })}
         </div>

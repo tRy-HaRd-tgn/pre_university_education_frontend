@@ -22,7 +22,7 @@ export default function Home() {
         <WebinarPlacements />
       </div>
       <div className={styles.teachers}>
-        <RewiewsPlacements />
+        <RewiewsPlacements category={"OTHER"} />
       </div>
       <div className={styles.ufu}>
         <UfuDescription />

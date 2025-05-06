@@ -32,7 +32,6 @@ export default function Page() {
     resolver: zodResolver(passwordRecoverySchema),
   });
   const send = async (data: PasswordRecoveryData) => {
-    console.log("суета");
     try {
       setSuccess(false);
       const reponse = await PasswordRecoveryService.getRecoveryToken(

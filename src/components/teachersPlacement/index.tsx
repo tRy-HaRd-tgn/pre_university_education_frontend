@@ -11,8 +11,6 @@ import TeachersService from "@/service/teachersService";
 export const TeachersPlacement = async ({ category }: any) => {
   const response = await TeachersService.getTeachers(category);
   const data = response.data;
-
-  console.log(data);
   return (
     <div className={styles.container} id="teachers">
       <h3 className={styles.heading}>

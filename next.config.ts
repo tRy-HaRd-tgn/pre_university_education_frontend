@@ -18,6 +18,12 @@ module.exports = {
         port: "4000",
         pathname: "/teachers/**",
       },
+      {
+        protocol: "http",
+        hostname: "localhost",
+        port: "4000",
+        pathname: "/rainbow/**",
+      },
     ],
   },
 };
