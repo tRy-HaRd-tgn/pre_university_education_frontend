@@ -12,15 +12,17 @@ import ReviewsService from "@/service/rewiewsService";
 export const CaroselWrapper = async ({ category }: { category: string }) => {
   const response = await ReviewsService.getReviews(category);
   const data = response.data;
+  console.log(data);
   return (
     <Carousel className={styles.carousel}>
       <CarouselContent className={styles.carouselContent}>
         {data.map((item: any, index: any) => {
+          console.log(item.course);
           return (
             <CarouselItem key={index}>
               <Teacher
                 name={item.user.name}
-                description={item.description}
+                description={item.course.name}
                 text={item.text}
                 img={item.user.picture}
               />

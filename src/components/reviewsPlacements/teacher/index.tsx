@@ -15,7 +15,7 @@ export const Teacher = ({ name, description, text, img, course }: Props) => {
         />
         <div>
           <h2 className={styles.name}>{name}</h2>
-          <p className={styles.description}>{course}</p>
+          <p className={styles.description}>{description}</p>
         </div>
       </div>
       <p className={styles.text}>{text}</p>

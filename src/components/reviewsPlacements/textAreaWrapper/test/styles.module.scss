@@ -1,0 +1,55 @@
+.content {
+  width: 40vw;
+  height: 60vh;
+  background-color: white;
+  padding: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+.heading {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 40px;
+
+  color: #000000;
+}
+.select {
+  min-width: 30%;
+  width: fit-content;
+  cursor: pointer;
+}
+.success {
+  background: #468d3d;
+  border-radius: 9px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  height: fit-content;
+  width: fit-content;
+  padding: 10px;
+  cursor: default;
+  color: #ffffff;
+}
+.error {
+  background: #8b4545;
+  border-radius: 9px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  height: fit-content;
+  width: fit-content;
+  padding: 10px;
+  cursor: default;
+  color: #ffffff;
+}
+.button {
+  cursor: pointer;
+}

@@ -20,7 +20,7 @@ export default class UsersService {
       },
     });
   }
-  static async sendReview(review: string, category: string) {
-    return $api.post("/users/reviews", { text: review, category });
+  static async sendReview(review: string, courseId: string) {
+    return $api.post("/users/profile/review", { text: review, courseId });
   }
 }
