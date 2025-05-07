@@ -29,7 +29,7 @@ export const StoreProvider = ({ children }: PrivateRouteProps) => {
         })
       );
       dispatch(updateAuth(true));
-      dispatch(updateUserCourses(response.data.courseId));
+      dispatch(updateUserCourses(response.data.courses));
       setLoading(false);
     } catch (e) {
       console.log(e);
