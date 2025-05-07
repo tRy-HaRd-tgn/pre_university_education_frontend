@@ -1,6 +1,7 @@
 import styles from "./styles.module.scss";
 import Image from "next/image";
 import { Map } from "../map";
+import { Globe, House, Mail, Phone } from "lucide-react";
 
 export const Footer = () => {
   return (
@@ -11,13 +12,7 @@ export const Footer = () => {
           <div className={styles.top}>
             <div className={styles.topRight}>
               <div className={styles.imgWrapper}>
-                <Image
-                  src={"./house.svg"}
-                  width={20}
-                  height={20}
-                  alt="error"
-                  className={styles.img}
-                />
+                <House width={20} height={20} className={styles.img} />
                 <h2 className={styles.heading}>Адрес</h2>
               </div>
               <p className={styles.text}>
@@ -29,13 +24,7 @@ export const Footer = () => {
             </div>
             <div className={styles.topRight}>
               <div className={styles.imgWrapper}>
-                <Image
-                  className={styles.img}
-                  src={"./phone.svg"}
-                  width={20}
-                  height={20}
-                  alt="error"
-                />
+                <Phone className={styles.img} width={20} height={20} />
                 <h2 className={styles.heading}>Телефоны</h2>
               </div>
               <p className={styles.text}>
@@ -49,13 +38,7 @@ export const Footer = () => {
           <div className={styles.bottom}>
             <div className={styles.bottomLeft}>
               <div className={styles.imgWrapper}>
-                <Image
-                  src={"./mail.svg"}
-                  width={20}
-                  height={20}
-                  alt="error"
-                  className={styles.img}
-                />
+                <Mail width={20} height={20} className={styles.img} />
                 <h2 className={styles.heading}>Почта</h2>
               </div>
               <div className={styles.textWrapper}>
@@ -92,13 +75,7 @@ export const Footer = () => {
             </div>
             <div className={styles.bottomRight}>
               <div className={styles.imgWrapper}>
-                <Image
-                  className={styles.img}
-                  src={"./globe.svg"}
-                  width={20}
-                  height={20}
-                  alt="error"
-                />
+                <Globe className={styles.img} width={20} height={20} />
                 <h2 className={styles.heading}>Социальные сети</h2>
               </div>
               <div className={styles.text}>

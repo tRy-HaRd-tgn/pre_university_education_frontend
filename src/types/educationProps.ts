@@ -1,6 +1,7 @@
 export type EducationProps = {
-  name: string;
-  heading: string;
-  date: string;
-  document: string;
+  name?: string;
+  heading?: string;
+  date?: Array<any>;
+  document?: string;
+  id?: string;
 };

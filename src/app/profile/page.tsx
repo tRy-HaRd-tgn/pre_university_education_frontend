@@ -13,7 +13,7 @@ import { Button } from "@/components/ui/button";
 import UsersService from "@/service/usersService";
 import { useDispatch } from "react-redux";
 import { updateFIO } from "../../../store/slices/userSlice";
-import { PopOverWrapper } from "./popOverWrapper";
+import { PopOverWrapper } from "./(popOverWrapper)";
 
 export default function Page() {
   const dispatch = useDispatch();

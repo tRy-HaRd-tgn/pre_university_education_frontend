@@ -23,7 +23,6 @@ export const CaroselWrapper = async ({ category }: { category: string }) => {
                 description={item.description}
                 text={item.text}
                 img={item.user.picture}
-                course={item.user.course.name}
               />
             </CarouselItem>
           );

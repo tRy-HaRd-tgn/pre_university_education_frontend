@@ -116,3 +116,31 @@
   color: black;
   border: 0.5px solid black;
 }
+.success {
+  background: #468d3d;
+  border-radius: 9px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  height: fit-content;
+  width: fit-content;
+  padding: 10px;
+  cursor: default;
+  color: #ffffff;
+}
+.error {
+  background: #8b4545;
+  border-radius: 9px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  height: fit-content;
+  width: fit-content;
+  padding: 10px;
+  cursor: default;
+  color: #ffffff;
+}

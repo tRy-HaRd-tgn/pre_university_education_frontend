@@ -1,7 +1,7 @@
 import styles from "./styles.module.scss";
 import { Header } from "@/components/header";
 import { HeadingPlacemnent } from "@/components/headingPlacement";
-import { Education } from "@/components/eduction";
+import { Education } from "@/components/education";
 import { QuestionsPlacement } from "@/components/questionPlacement";
 import { Footer } from "@/components/footer";
 import { TeachersPlacement } from "@/components/teachersPlacement";
@@ -15,7 +15,7 @@ export default function CoursePage() {
         <HeadingPlacemnent />
       </div>
       <div className={styles.coursePlacement}>
-        <Education />
+        <Education category={"EDUCATION"} />
       </div>
       <div className={styles.questions}>
         <div className={styles.questionsWrapper}>
