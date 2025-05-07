@@ -1,4 +1,3 @@
-import { data } from "@/components/coursePlacements/data";
 import $api from "../http";
 export default class TeachersService {
   static async getTeachers(category: string) {
