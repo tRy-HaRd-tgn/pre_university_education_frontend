@@ -22,7 +22,7 @@ export const TeachersPlacement = async ({ category }: any) => {
             {data?.map((item: any, index: any) => {
               return (
                 <CarouselItem
-                  className="pl-5 md:basis-1/2 lg:basis-1/4"
+                  className="pl-5 md:basis-1/2 lg:basis-1/4 h-full"
                   key={index}
                 >
                   <div className="p-7">
