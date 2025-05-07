@@ -7,7 +7,11 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import AuthService from "@/service/authService";
 import { useDispatch } from "react-redux";
-import { updateAuth, updateUserInfo } from "../../../../store/slices/userSlice";
+import {
+  updateAuth,
+  updateUserCourses,
+  updateUserInfo,
+} from "../../../../store/slices/userSlice";
 import { useRouter } from "next/navigation";
 import UsersService from "@/service/usersService";
 
@@ -40,6 +44,7 @@ export const LogForm = ({ setState }: LogRegFormProps) => {
           email: response.data.email,
         })
       );
+      dispatch(updateUserCourses(response.data.courses));
       dispatch(updateAuth(true));
     } catch (e) {
       console.log(e);

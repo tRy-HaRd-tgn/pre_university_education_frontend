@@ -58,7 +58,8 @@ export const Header = ({ flag }: Props) => {
             pathName === "/themes" ||
             pathName === "/exam" ||
             pathName === "/defense" ||
-            pathName === "/position" ? (
+            pathName === "/position" ||
+            pathName.includes("/educationPage") ? (
               <></>
             ) : (
               <p
@@ -75,7 +76,8 @@ export const Header = ({ flag }: Props) => {
             pathName === "/profile" ||
             pathName === "/themes" ||
             pathName === "/defense" ||
-            pathName === "/position" ? (
+            pathName === "/position" ||
+            pathName.includes("/educationPage") ? (
               <></>
             ) : (
               <p
@@ -92,7 +94,8 @@ export const Header = ({ flag }: Props) => {
             pathName === "/profile" ||
             pathName === "/themes" ||
             pathName === "/defense" ||
-            pathName === "/position" ? (
+            pathName === "/position" ||
+            pathName.includes("/educationPage") ? (
               <></>
             ) : (
               <p
