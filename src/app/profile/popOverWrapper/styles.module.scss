@@ -1,0 +1,18 @@
+.trigger {
+  background-color: black;
+  color: white;
+  margin-top: 25%;
+  width: fit-content;
+  height: fit-content;
+  padding: 10px;
+  border-radius: 15px;
+  font-size: 120%;
+  font: inherit;
+  font-feature-settings: inherit;
+  font-variation-settings: inherit;
+  cursor: pointer;
+}
+.trigger:hover {
+  background-color: white;
+  color: black;
+}

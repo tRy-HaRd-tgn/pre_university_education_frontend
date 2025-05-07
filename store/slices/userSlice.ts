@@ -8,6 +8,7 @@ interface UserState {
   patronymic?: string;
   picture?: string;
   email?: string;
+  courses?: string[];
 }
 
 const initialState: UserState = {
@@ -17,6 +18,7 @@ const initialState: UserState = {
   patronymic: "",
   picture: "",
   email: "",
+  courses: [],
 };
 
 export const userSlice = createSlice({
@@ -39,8 +41,12 @@ export const userSlice = createSlice({
       state.surname = action.payload.surname;
       state.patronymic = action.payload.patronymic;
     },
+    updateUserCourses: (state, action: PayloadAction<string[]>) => {
+      state.courses = action.payload;
+    },
   },
 });
 
-export const { updateAuth, updateUserInfo, updateFIO } = userSlice.actions;
+export const { updateAuth, updateUserInfo, updateFIO, updateUserCourses } =
+  userSlice.actions;
 export default userSlice.reducer;

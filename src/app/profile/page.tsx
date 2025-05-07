@@ -13,11 +13,7 @@ import { Button } from "@/components/ui/button";
 import UsersService from "@/service/usersService";
 import { useDispatch } from "react-redux";
 import { updateFIO } from "../../../store/slices/userSlice";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover";
+import { PopOverWrapper } from "./popOverWrapper";
 
 export default function Page() {
   const dispatch = useDispatch();
@@ -27,7 +23,6 @@ export default function Page() {
   const [patronymic, setPatronymic] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(false);
-
   const userName = useSelector((state: any) => state.userSlice.name);
   const userSurname = useSelector((state: any) => state.userSlice.surname);
   const userPatronymic = useSelector(
@@ -69,12 +64,7 @@ export default function Page() {
       <div className={styles.container}>
         <div className={styles.leftSide}>
           <ProfileLogo img={img} />
-          <Popover>
-            <PopoverTrigger className={styles.trigger}>
-              Курсы, на которые вы записаны
-            </PopoverTrigger>
-            <PopoverContent>Place content for the popover here.</PopoverContent>
-          </Popover>
+          <PopOverWrapper />
         </div>
         <div className={styles.rightSide}>
           {Object.entries(profile).map(([key, value]) => (
