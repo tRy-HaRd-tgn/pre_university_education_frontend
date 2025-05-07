@@ -3,7 +3,8 @@ import styles from "./styles.module.scss";
 import { QuestionsProps as Props } from "@/types/questionsProps";
 import { useState } from "react";
 import Image from "next/image";
-export const Component = ({ question, answer }: Props) => {
+import { useRouter } from "next/router";
+export const Component = ({ question, answer, id }: Props) => {
   const [state, setState] = useState(false);
   return (
     <div className={styles.container}>

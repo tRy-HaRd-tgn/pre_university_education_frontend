@@ -1,7 +1,6 @@
 "use client";
 import styles from "./styles.module.scss";
 import { Component } from "./component";
-import { data } from "./data";
 import { useEffect } from "react";
 import { useState } from "react";
 import FaqService from "@/service/faqService";
