@@ -39,7 +39,7 @@ export const Test = ({ text }: { text: string }) => {
           <SelectValue placeholder="курс" />
         </SelectTrigger>
         <SelectContent style={{ zIndex: "9999" }}>
-          {array.map((item: any) => (
+          {array?.map((item: any) => (
             <SelectItem
               style={{ cursor: "pointer" }}
               key={item.id}
