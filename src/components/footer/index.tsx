@@ -1,5 +1,4 @@
 import styles from "./styles.module.scss";
-import Image from "next/image";
 import { Map } from "../map";
 import { Globe, House, Mail, Phone } from "lucide-react";
 

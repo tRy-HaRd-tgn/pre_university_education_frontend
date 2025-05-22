@@ -1,12 +1,13 @@
 {
-  "name": "pre_university_education_frontend",
+  "name": "cdo.iues.moodle.sfedu.ru",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "next export"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.0.1",
