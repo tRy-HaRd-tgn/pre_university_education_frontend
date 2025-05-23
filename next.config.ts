@@ -2,7 +2,6 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
-  output: "export",
 };
 module.exports = {
   images: {
@@ -28,6 +27,42 @@ module.exports = {
       {
         protocol: "http",
         hostname: "localhost",
+        port: "4000",
+        pathname: "/api/users/**",
+      },
+      {
+        protocol: "https",
+        hostname: "localhost",
+        port: "4000",
+        pathname: "/users/**",
+      },
+      {
+        protocol: "https",
+        hostname: "localhost",
+        port: "4000",
+        pathname: "/teachers/**",
+      },
+      {
+        protocol: "https",
+        hostname: "localhost",
+        port: "4000",
+        pathname: "/rainbow/**",
+      },
+      {
+        protocol: "https",
+        hostname: "localhost",
+        port: "4000",
+        pathname: "/api/users/**",
+      },
+      {
+        protocol: "http",
+        hostname: "api.sitetrialbox.ru",
+        port: "4000",
+        pathname: "/api/users/**",
+      },
+      {
+        protocol: "https",
+        hostname: "api.sitetrialbox.ru",
         port: "4000",
         pathname: "/api/users/**",
       },
