@@ -81,21 +81,25 @@ module.exports = {
       {
         protocol: "https",
         hostname: "sitetrialbox.ru",
+        port: "10001",
         pathname: "/rainbow/**",
       },
       {
         protocol: "http",
         hostname: "sitetrialbox.ru",
+        port: "10001",
         pathname: "/rainbow/**",
       },
       {
         protocol: "http",
         hostname: "sitetrialbox.ru",
+        port: "10001",
         pathname: "/api/users/**",
       },
       {
         protocol: "https",
         hostname: "sitetrialbox.ru",
+        port: "10001",
         pathname: "/api/users/**",
       },
     ],
