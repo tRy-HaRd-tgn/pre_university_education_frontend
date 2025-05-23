@@ -66,6 +66,38 @@ module.exports = {
         port: "4000",
         pathname: "/api/users/**",
       },
+      {
+        protocol: "http",
+        hostname: "sitetrialbox.ru",
+        port: "4000",
+        pathname: "/api/users/**",
+      },
+      {
+        protocol: "https",
+        hostname: "sitetrialbox.ru",
+        port: "4000",
+        pathname: "/api/users/**",
+      },
+      {
+        protocol: "https",
+        hostname: "sitetrialbox.ru",
+        pathname: "/rainbow/**",
+      },
+      {
+        protocol: "http",
+        hostname: "sitetrialbox.ru",
+        pathname: "/rainbow/**",
+      },
+      {
+        protocol: "http",
+        hostname: "sitetrialbox.ru",
+        pathname: "/api/users/**",
+      },
+      {
+        protocol: "https",
+        hostname: "sitetrialbox.ru",
+        pathname: "/api/users/**",
+      },
     ],
   },
 };
