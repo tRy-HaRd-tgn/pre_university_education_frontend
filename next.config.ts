@@ -4,6 +4,14 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
 };
 module.exports = {
+  async rewrites() {
+    return [
+      {
+        source: "/api/:path*", // Все запросы, начинающиеся с /api/
+        destination: "http://localhost:4000/api/:path*", // Адрес вашего NestJS приложения (например, порт 3001)
+      },
+    ];
+  },
   images: {
     remotePatterns: [
       {
