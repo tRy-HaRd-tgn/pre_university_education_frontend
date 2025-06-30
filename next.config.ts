@@ -68,6 +68,24 @@ module.exports = {
         port: "10001",
         pathname: "/api/**",
       },
+      {
+        protocol: "https",
+        hostname: "api-cdo-iues.sfedu.ru",
+        port: "10001",
+        pathname: "/api/users/**",
+      },
+      {
+        protocol: "https",
+        hostname: "api-cdo-iues.sfedu.ru",
+        port: "10001",
+        pathname: "/api/teachers/**",
+      },
+      {
+        protocol: "https",
+        hostname: "api-cdo-iues.sfedu.ru",
+        port: "10001",
+        pathname: "/api/rainbow/**",
+      },
     ],
   },
 };
