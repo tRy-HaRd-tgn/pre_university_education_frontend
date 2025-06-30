@@ -1,9 +1,12 @@
 import type { NextConfig } from "next";
 
+// NOTE: Disable TLS certificate verification in development/CI.
+// This is a temporary workaround for invalid certificate on api-cdo-iues.sfedu.ru
+// REMOVE when the server presents a valid certificate.
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
+
 const nextConfig: NextConfig = {
   reactStrictMode: true,
-};
-module.exports = {
   async rewrites() {
     return [
       {
@@ -65,28 +68,25 @@ module.exports = {
       {
         protocol: "https",
         hostname: "api-cdo-iues.sfedu.ru",
-        port: "10001",
         pathname: "/api/**",
       },
       {
         protocol: "https",
         hostname: "api-cdo-iues.sfedu.ru",
-        port: "10001",
         pathname: "/api/users/**",
       },
       {
         protocol: "https",
         hostname: "api-cdo-iues.sfedu.ru",
-        port: "10001",
         pathname: "/api/teachers/**",
       },
       {
         protocol: "https",
         hostname: "api-cdo-iues.sfedu.ru",
-        port: "10001",
         pathname: "/api/rainbow/**",
       },
     ],
   },
 };
+
 export default nextConfig;
