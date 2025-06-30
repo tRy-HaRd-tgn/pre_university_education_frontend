@@ -5,7 +5,7 @@ export default function NotFound() {
         width: "100vw",
         height: "100vh",
         display: "flex",
-        justifyContent: "center",
+        justifyContent: "space-between",
         alignItems: "center",
         backgroundColor: "white",
         fontSize: "150%",

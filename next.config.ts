@@ -7,8 +7,8 @@ module.exports = {
   async rewrites() {
     return [
       {
-        source: "/api/:path*", // Все запросы, начинающиеся с /api/
-        destination: "http://localhost:4000/api/:path*", // Адрес вашего NestJS приложения (например, порт 3001)
+        source: "/api/:path*",
+        destination: "http://localhost:4000/api/:path*",
       },
     ];
   },
@@ -63,52 +63,10 @@ module.exports = {
         pathname: "/api/users/**",
       },
       {
-        protocol: "http",
-        hostname: "api.sitetrialbox.ru",
-        port: "4000",
-        pathname: "/api/users/**",
-      },
-      {
         protocol: "https",
-        hostname: "api.sitetrialbox.ru",
-        port: "4000",
-        pathname: "/api/users/**",
-      },
-      {
-        protocol: "http",
-        hostname: "sitetrialbox.ru",
-        port: "4000",
-        pathname: "/api/users/**",
-      },
-      {
-        protocol: "https",
-        hostname: "sitetrialbox.ru",
-        port: "4000",
-        pathname: "/api/users/**",
-      },
-      {
-        protocol: "https",
-        hostname: "sitetrialbox.ru",
+        hostname: "api-cdo-iues.sfedu.ru",
         port: "10001",
-        pathname: "/rainbow/**",
-      },
-      {
-        protocol: "http",
-        hostname: "sitetrialbox.ru",
-        port: "10001",
-        pathname: "/rainbow/**",
-      },
-      {
-        protocol: "http",
-        hostname: "sitetrialbox.ru",
-        port: "10001",
-        pathname: "/api/users/**",
-      },
-      {
-        protocol: "https",
-        hostname: "sitetrialbox.ru",
-        port: "10001",
-        pathname: "/api/users/**",
+        pathname: "/api/**",
       },
     ],
   },
