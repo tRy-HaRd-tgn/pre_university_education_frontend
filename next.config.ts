@@ -85,6 +85,21 @@ const nextConfig: NextConfig = {
         hostname: "api-cdo-iues.sfedu.ru",
         pathname: "/api/rainbow/**",
       },
+      {
+        protocol: "https",
+        hostname: "api-cdo-iues.sfedu.ru",
+        pathname: "/api/webinars/**",
+      },
+      {
+        protocol: "https",
+        hostname: "api-cdo-iues.sfedu.ru",
+        pathname: "/api/courses/**",
+      },
+      {
+        protocol: "https",
+        hostname: "api-cdo-iues.sfedu.ru",
+        pathname: "/api/reviews/**",
+      },
     ],
   },
 };
