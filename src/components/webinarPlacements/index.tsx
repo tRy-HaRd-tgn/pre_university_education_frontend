@@ -35,3 +35,6 @@ export const WebinarPlacements = async () => {
     </div>
   );
 };
+
+// Добавляем revalidate для автоматического обновления данных каждые 60 секунд
+export const revalidate = 60;

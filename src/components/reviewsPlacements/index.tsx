@@ -1,5 +1,6 @@
 import styles from "./styles.module.scss";
 import { CaroselWrapper } from "./caroselWrapper";
+import { CarouselWrapperClient } from "./CarouselWrapperClient";
 import { TextAreaWrapper } from "./textAreaWrapper";
 
 export const RewiewsPlacements = ({ category }: { category: string }) => {
@@ -7,7 +8,7 @@ export const RewiewsPlacements = ({ category }: { category: string }) => {
     <div className={styles.container} id="reviews">
       <div className={styles.content}>
         <div className={styles.leftSide}>
-          <CaroselWrapper category={category} />
+          <CarouselWrapperClient category={category} />
         </div>
         <div className={styles.rightSide}>
           <TextAreaWrapper />

@@ -7,6 +7,11 @@ process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
+  // Настройки для автоматического обновления данных
+  experimental: {
+    // Включаем оптимизацию CSS
+    optimizeCss: true,
+  },
   async rewrites() {
     return [
       {

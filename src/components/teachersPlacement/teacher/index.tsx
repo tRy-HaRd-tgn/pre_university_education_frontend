@@ -1,3 +1,4 @@
+"use client";
 import styles from "./styles.module.scss";
 import { Teacher as Props } from "@/types/teacher";
 import Image from "next/image";
