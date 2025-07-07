@@ -63,7 +63,10 @@ export default function Page() {
       <Header flag={true} />
       <div className={styles.container}>
         <div className={styles.leftSide}>
-          <ProfileLogo img={img} />
+          <div className={styles.logoWrapper}>
+            <ProfileLogo img={img} />
+            <p className={styles.text}>Нажмите на фотографию для изменения</p>
+          </div>
           <PopOverWrapper />
         </div>
         <div className={styles.rightSide}>

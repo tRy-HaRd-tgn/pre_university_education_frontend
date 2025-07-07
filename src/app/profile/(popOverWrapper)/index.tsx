@@ -18,8 +18,12 @@ export const PopOverWrapper = () => {
         <PopoverTrigger className={styles.trigger}>
           Курсы, на которые вы записаны
         </PopoverTrigger>
-        <PopoverContent>
-          {courses?.map((item: any) => item.name)}
+        <PopoverContent className={styles.content}>
+          {courses?.map((item: any) => (
+            <div className={styles.item} key={item.id || item.name}>
+              {item.name}
+            </div>
+          ))}
         </PopoverContent>
       </Popover>
     </>

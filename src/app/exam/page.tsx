@@ -6,6 +6,7 @@ import { TeachersPlacement } from "@/components/teachersPlacement";
 import { RainbowPlacement } from "@/components/rainbowPlacement";
 import { ExamProgram } from "@/components/examProgram";
 import { ExamChoise } from "@/components/examChoise";
+
 export default function Page() {
   return (
     <div className={styles.container}>
@@ -29,3 +30,6 @@ export default function Page() {
     </div>
   );
 }
+
+// Добавляем revalidate для автоматического обновления данных каждые 60 секунд
+export const revalidate = 60;

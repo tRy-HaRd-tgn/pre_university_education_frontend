@@ -1,4 +1,3 @@
-"use client";
 import styles from "./style.module.scss";
 import {
   Carousel,
@@ -9,44 +8,10 @@ import {
 } from "@/components/ui/carousel";
 import { Teacher } from "./teacher";
 import TeachersService from "@/service/teachersService";
-import { useEffect, useState } from "react";
 
-export const TeachersPlacement = ({ category }: any) => {
-  const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchTeachers = async () => {
-      try {
-        const response = await TeachersService.getTeachers(category);
-        setData(response.data);
-      } catch (error) {
-        console.error("Ошибка при загрузке преподавателей:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchTeachers();
-
-    // Обновляем данные каждые 30 секунд
-    const interval = setInterval(fetchTeachers, 30000);
-
-    return () => clearInterval(interval);
-  }, [category]);
-
-  if (loading) {
-    return (
-      <div className={styles.container} id="teachers">
-        <h3 className={styles.heading}>
-          НАШИ <span className={styles.headingSpan}>ПРЕПОДАВАТЕЛИ</span>
-        </h3>
-        <div className={styles.content}>
-          <p>Загрузка преподавателей...</p>
-        </div>
-      </div>
-    );
-  }
+export const TeachersPlacementServer = async ({ category }: any) => {
+  const response = await TeachersService.getTeachers(category);
+  const data = response.data;
 
   return (
     <div className={styles.container} id="teachers">
@@ -86,3 +51,6 @@ export const TeachersPlacement = ({ category }: any) => {
     </div>
   );
 };
+
+// Добавляем revalidate для автоматического обновления данных каждые 60 секунд
+export const revalidate = 60;

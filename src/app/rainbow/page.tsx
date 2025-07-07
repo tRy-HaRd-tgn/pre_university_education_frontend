@@ -7,7 +7,7 @@ import { RewiewsPlacements } from "@/components/reviewsPlacements";
 import { TeachersPlacement } from "@/components/teachersPlacement";
 import { Footer } from "@/components/footer";
 
-export default async function Page() {
+export default function Page() {
   return (
     <div className={styles.container}>
       <Header flag={true} />
@@ -30,3 +30,6 @@ export default async function Page() {
     </div>
   );
 }
+
+// Добавляем revalidate для автоматического обновления данных каждые 60 секунд
+export const revalidate = 60;
