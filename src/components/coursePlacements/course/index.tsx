@@ -9,7 +9,7 @@ export const Course = ({ name, description, img, size, color, url }: Props) => {
   return (
     <div
       onClick={() => {
-        router.replace(`/${url}`);
+        router.push(`/${url}`);
       }}
       className={styles.container}
       style={
