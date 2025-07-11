@@ -5,7 +5,9 @@ import { WannaTeach } from "../wannaTeach";
 import { useLockScroll } from "../modalComponent/hook";
 import { useSelector } from "react-redux";
 import { toast, Toaster } from "sonner";
+import { useRouter } from "next/navigation";
 export const ClassesPropgram = () => {
+  const router = useRouter();
   const [showModal, setShowModal] = useLockScroll();
   const auth = useSelector((state: any) => state.userSlice.auth);
   const checkModal = () => {
@@ -47,9 +49,21 @@ export const ClassesPropgram = () => {
             <p className={styles.elem}>Русский Язык</p>
             <p className={styles.elem}>Английский Язык</p>
           </div>
-          <button onClick={checkModal} className={styles.button}>
-            Записаться
-          </button>
+          <div className={styles.buttonWrapper}>
+            <button
+              onClick={() => {
+                router.replace(
+                  "https://iues.sfedu.ru/raspv/HTML/Raspisan.html"
+                );
+              }}
+              className={styles.button}
+            >
+              Расписание
+            </button>
+            <button onClick={checkModal} className={styles.button}>
+              Записаться
+            </button>
+          </div>
         </div>
       </div>
       {showModal && (

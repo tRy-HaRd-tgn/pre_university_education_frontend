@@ -7,7 +7,9 @@ import Modal from "../modalComponent";
 import { WannaTeach } from "../wannaTeach";
 import { useSelector } from "react-redux";
 import { toast } from "sonner";
+import { useRouter } from "next/navigation";
 export const ExamChoise = () => {
+  const router = useRouter();
   const [showModal, setShowModal] = useLockScroll();
   const [state, setState]: [boolean, any] = useState(false);
   const auth = useSelector((state: any) => state.userSlice.auth);
@@ -94,6 +96,11 @@ export const ExamChoise = () => {
               <button
                 style={state ? { backgroundColor: "#c23e7e" } : {}}
                 className={styles.greenB}
+                onClick={() => {
+                  router.replace(
+                    "https://iues.sfedu.ru/raspv/HTML/Raspisan.html"
+                  );
+                }}
               >
                 РАСПИСАНИЕ
               </button>

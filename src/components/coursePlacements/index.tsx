@@ -5,9 +5,6 @@ import { Course } from "./course";
 export const CoursePlacement = () => {
   return (
     <div className={styles.flex}>
-      <div className={styles.course} id="course">
-        <p className={styles.description}>Курс</p>
-      </div>
       <div className={styles.coursePlace}>
         {data?.map((item, index) => {
           return (
