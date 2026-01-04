@@ -1,36 +1,186 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Центр дополнительного образования ЮФУ (ЦДО ИУЭС ЮФУ)
 
-## Getting Started
+Веб-приложение для Центра дополнительного образования Южного федерального университета. Платформа предоставляет доступ к дополнительным образовательным программам, курсам повышения квалификации, профессиональной переподготовке, вебинарам и другим образовательным услугам.
 
-First, run the development server:
+## Технологический стек
+
+- **Framework**: Next.js 15.2.4
+- **React**: 19.0.0
+- **TypeScript**: 5.x
+- **State Management**: Redux Toolkit 2.7.0
+- **Стилизация**:
+  - SCSS (Sass)
+  - Tailwind CSS 4
+  - CSS Modules
+- **UI компоненты**:
+  - Radix UI (Popover, Select, Slot)
+  - shadcn-ui
+  - Lucide React (иконки)
+- **Формы**: React Hook Form с Zod валидацией
+- **HTTP клиент**: Axios
+- **Карты**: Leaflet с React Leaflet
+- **Карусели**: Embla Carousel
+- **Уведомления**: Sonner
+- **Темы**: next-themes
+
+## Основной функционал
+
+- Аутентификация и авторизация пользователей
+- Управление профилем пользователя
+- Просмотр и запись на образовательные курсы
+- Просмотр и регистрация на вебинары
+- Информация о преподавателях и отзывы
+- Программы подготовки к ЕГЭ и ОГЭ
+- Карта с расположением центра
+- Восстановление пароля
+- Адаптивный дизайн
+
+## Требования
+
+- Node.js 18.x или выше
+- npm или yarn
+
+## Установка
+
+1. Клонируйте репозиторий:
+
+```bash
+git clone <repository-url>
+cd pre_university_education_frontend
+```
+
+2. Установите зависимости:
+
+```bash
+npm install
+```
+
+3. Создайте файл `.env.local` в корне проекта и настройте переменные окружения:
+
+```env
+NEXT_PUBLIC_API_URL=<your-api-url>
+NEXT_PUBLIC_APLICATION_URL=<your-application-url>
+```
+
+## Запуск проекта
+
+### Режим разработки
+
+Запуск сервера разработки с Turbopack:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Приложение будет доступно по адресу [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Сборка для production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Создание оптимизированной сборки:
 
-## Learn More
+```bash
+npm run build
+```
 
-To learn more about Next.js, take a look at the following resources:
+### Запуск production сервера
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm start
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Экспорт статического сайта
 
-## Deploy on Vercel
+```bash
+npm run export
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Линтинг
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Проверка кода линтером:
+
+```bash
+npm run lint
+```
+
+## Структура проекта
+
+```
+pre_university_education_frontend/
+├── src/
+│   ├── app/                    # Next.js App Router страницы
+│   │   ├── auth/               # Страницы аутентификации
+│   │   ├── coursePage/         # Страница курса
+│   │   ├── educationPage/      # Страницы образовательных программ
+│   │   ├── profile/            # Профиль пользователя
+│   │   ├── themes/             # Темы обучения
+│   │   └── ...
+│   ├── components/             # React компоненты
+│   │   ├── header/             # Шапка сайта
+│   │   ├── footer/             # Подвал сайта
+│   │   ├── coursePlacements/   # Размещение курсов
+│   │   ├── webinarPlacements/  # Размещение вебинаров
+│   │   ├── reviewsPlacements/  # Отзывы
+│   │   ├── teachersPlacement/  # Преподаватели
+│   │   ├── logRegForm/         # Формы входа и регистрации
+│   │   ├── map/                # Карта
+│   │   └── ui/                 # UI компоненты (shadcn)
+│   ├── service/                # Сервисы для работы с API
+│   │   ├── authService.ts
+│   │   ├── coursesService.ts
+│   │   ├── teachersService.ts
+│   │   └── ...
+│   ├── http/                   # HTTP клиент (Axios)
+│   ├── types/                  # TypeScript типы
+│   └── lib/                    # Утилиты
+├── store/                      # Redux store
+│   └── slices/                 # Redux слайсы
+│       └── userSlice.ts
+├── public/                     # Статические файлы
+└── components.json             # Конфигурация shadcn-ui
+```
+
+## API
+
+Приложение взаимодействует с API по адресу `https://api-cdo-iues.sfedu.ru`. Все запросы проксируются через Next.js rewrites для избежания проблем с CORS.
+
+Основные эндпоинты:
+
+- `/api/auth/*` - аутентификация
+- `/api/courses/*` - курсы
+- `/api/webinars/*` - вебинары
+- `/api/teachers/*` - преподаватели
+- `/api/reviews/*` - отзывы
+- `/api/users/*` - пользователи
+
+## Особенности конфигурации
+
+- В режиме разработки отключена проверка TLS сертификатов (см. `next.config.ts`)
+- Настроены remote patterns для оптимизации изображений Next.js
+- Используется автоматическое обновление данных (revalidate) на страницах
+- Поддержка темной/светлой темы через next-themes
+
+## Разработка
+
+### Стилизация
+
+Проект использует комбинацию подходов:
+
+- **SCSS модули** для компонентных стилей
+- **Tailwind CSS** для утилитарных классов
+- **CSS Modules** для изоляции стилей
+
+### Компоненты
+
+UI компоненты основаны на shadcn-ui и Radix UI, что обеспечивает доступность и кастомизацию.
+
+### State Management
+
+Redux Toolkit используется для управления глобальным состоянием приложения (пользователь, аутентификация).
+
+## Лицензия
+
+Проект разработан для Центра дополнительного образования ЮФУ (ЦДО ИУЭС ЮФУ).
+
+## Контакты
+
+Для вопросов и предложений обращайтесь в Центр дополнительного образования ЮФУ.
